@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-ink: #07211a;
+  --color-forest: #0b3327;
+  --color-moss: #12503b;
+  --color-leaf: #1b6e51;
+  --color-jade: #2e9c74;
+  --color-gold: #bd882a;
+  --color-goldsoft: #e0b45f;
+  --color-honey: #f3d89a;
+  --color-cream: #fcf7ec;
+  --color-sand: #f1e5ce;
+  --color-clay: #a9502a;
+  --color-sambal: #bf3a1e;
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-jakarta);
+
+  --shadow-warm: 0 24px 50px -28px rgba(11, 51, 39, 0.5);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-honey);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* --- texture: kraft paper grain, no image assets --- */
+@utility grain {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(189, 136, 42, 0.07) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 68% 42%, rgba(11, 51, 39, 0.06) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 34% 78%, rgba(169, 80, 42, 0.06) 0 1.5px, transparent 2px);
+  background-size: 46px 46px, 62px 62px, 54px 54px;
+}
+
+@utility gold-rule {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-goldsoft) 18%,
+    var(--color-gold) 50%,
+    var(--color-goldsoft) 82%,
+    transparent
+  );
+}
+
+/* --- entrance motion --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.75s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(4px) scaleX(0.9);
+  }
+  35% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-14px) scaleX(1.1);
+  }
+}
+.steam-puff {
+  animation: steam 4.2s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(-1.2deg);
+  }
+}
+.drift {
+  animation: drift 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .steam-puff,
+  .drift {
+    animation: none;
+  }
 }
