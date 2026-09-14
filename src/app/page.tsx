@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import Kirim from "@/components/Kirim";
 import MenuBoard from "@/components/MenuBoard";
 import Momen from "@/components/Momen";
-import NorenBand from "@/components/NorenBand";
 import RevealTrigger from "@/components/RevealTrigger";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
         <CaraOrder />
         <Kirim />
         <Momen />
-        <NorenBand />
         <Faq />
       </main>
       <Footer />

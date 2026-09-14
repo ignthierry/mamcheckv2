@@ -1,5 +1,6 @@
 import { site, waLink } from "@/lib/site";
 import { AyamBetutu, KacangBali, SateLilit, OrnamentBand, TumpalBorder, WhatsAppIcon } from "./Art";
+import HeroCloth from "./HeroCloth";
 import { Shell } from "./Section";
 
 const jaminan = ["Halal & tanpa pengawet", "Dimasak setelah dipesan", "Bumbu base genep segar"];
@@ -7,10 +8,24 @@ const jaminan = ["Halal & tanpa pengawet", "Dimasak setelah dipesan", "Bumbu bas
 export default function Hero() {
   return (
     <section id="atas" className="relative overflow-hidden">
+      {/* latar utama: kain noren ThreeUI bergerak */}
+      <HeroCloth />
+
+      {/* selubung cream supaya teks tetap terbaca di atas kain */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-cream/88 via-cream/45 to-transparent sm:from-cream/85 sm:via-cream/30 sm:to-transparent"
+      />
+      {/* scrim tambahan di kolom teks (kiri) supaya kain tetap terbaca di kanan/bawah */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-cream/88 via-cream/50 to-transparent lg:block"
+      />
+
       {/* latar hangat */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 grain opacity-90"
+        className="pointer-events-none absolute inset-0 grain opacity-70"
       />
       <div
         aria-hidden="true"
@@ -21,7 +36,7 @@ export default function Hero() {
         className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-jade/15 blur-3xl"
       />
 
-      <Shell className="relative grid items-center gap-14 pt-12 pb-20 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pt-20 lg:pb-28">
+      <Shell className="relative grid items-center gap-14 pt-12 pb-28 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pt-20 lg:pb-48">
         <div className="reveal">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-[0.7rem] font-semibold tracking-[0.18em] text-moss uppercase">
             Masakan Bali rumahan · made by order
@@ -83,6 +98,14 @@ export default function Hero() {
               </li>
             ))}
           </ul>
+
+          <p className="mt-7 flex items-start gap-2.5 text-[0.85rem] leading-relaxed text-moss/85">
+            <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rotate-45 bg-jade/70" />
+            <span>
+              Kain noren di latar halaman ini bergerak selama dapur {site.city} masih mengerjakan
+              pesanan hari ini — kalau tirai berhenti, artinya pesanan sudah tutup.
+            </span>
+          </p>
 
           <p className="mt-7 rounded-2xl border border-gold/30 bg-cream/60 px-5 py-3.5 text-[0.83rem] leading-relaxed text-moss/85">
             <strong className="font-semibold text-forest">Catatan:</strong> karena semua dimasak

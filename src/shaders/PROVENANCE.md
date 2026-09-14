@@ -87,11 +87,14 @@ same OFL typeface (Fragment Mono v6, latin subset) is installed at that path:
 
 ## Integration
 
-- `src/components/NorenBand.tsx` renders
-  `<WovenCloth variant="washi" hue={0} saturation={1.00} brightness={1.00} />` inside the
-  `.shader-frame` host from the documented usage, and imports `@/shaders/threeui.css`.
-  The iframe is mounted by an `IntersectionObserver` (320 px margin) so the cloth simulation
-  only exists once the band approaches the viewport.
-- `src/app/page.tsx` places the band between `Momen` and `Faq`.
+- `src/components/HeroCloth.tsx` renders
+  `<WovenCloth variant="washi" hue={0} saturation={1.00} brightness={1.00} />` as the hero
+  backdrop (`absolute inset-0`, `pointer-events-none`, `aria-hidden`) inside the `.shader-frame`
+  host from the documented usage, and imports `@/shaders/threeui.css`. The iframe is mounted by an
+  `IntersectionObserver` on the hero itself, so the cloth simulation only exists once the hero is
+  in view (it is the first paint, so nothing is deferred in practice).
+- `src/components/Hero.tsx` places `<HeroCloth />` behind the hero copy and covers it with a cream
+  veil (`from-cream/95 via-cream/82 to-cream/45`) so the dark-on-cream text stays readable while
+  the cloth reads through; a caption line in the hero copy explains the moving noren.
 - `.shader-frame` lives in `src/app/globals.css` (the registry CSS does not ship that class).
 - The washi document loads `three@0.160.0` from jsDelivr, exactly as authored.
