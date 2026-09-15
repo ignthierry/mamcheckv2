@@ -54,7 +54,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="font-medium text-cream underline decoration-goldsoft/50 underline-offset-4"
                 >
-                  +{site.whatsapp}
+                  {site.whatsappDisplay}
                 </a>
               </li>
               <li>Jam operasional

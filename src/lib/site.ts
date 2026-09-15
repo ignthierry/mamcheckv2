@@ -7,7 +7,8 @@ export const site = {
   brand: "MamCheck",
   tagline: "Masakan Bali rumahan — made by order",
   city: "Sidoarjo", // TODO: kota asli
-  whatsapp: "6281234567890", // TODO: nomor WA admin format 62xxx (tanpa + / 0 / spasi)
+  whatsapp: "6282142312999", // nomor WA admin format 62xxx (tanpa + / 0 / spasi)
+  whatsappDisplay: "+62 821-4231-2999", // tampilan nomor untuk pelanggan
   instagram: "https://instagram.com/", // TODO: akun IG
   jam: "Setiap hari, 08.00 – 20.00 WIB", // TODO: jam operasional
   alamat: "Jl. Contoh No. 00, Sidoarjo, Jawa Timur", // TODO: alamat dapur
