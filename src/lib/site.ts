@@ -10,7 +10,7 @@ export const site = {
   whatsapp: "6282142312999", // nomor WA admin format 62xxx (tanpa + / 0 / spasi)
   whatsappDisplay: "+62 821-4231-2999", // tampilan nomor untuk pelanggan
   instagram: "https://instagram.com/", // TODO: akun IG
-  jam: "Setiap hari, 08.00 – 20.00 WIB", // TODO: jam operasional
+  jam: "Setiap hari, 08.00 – 21.00 WIB",
   alamat:
     "Jl. Lapangan Tembak, Dsn. Ngelawang, Watukosek No. 36, RT 003/RW 001, Gempol, Pasuruan",
   mapsQuery: "Jl. Lapangan Tembak, Watukosek, Gempol, Pasuruan",
