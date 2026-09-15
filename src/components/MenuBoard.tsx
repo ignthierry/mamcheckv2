@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { menu, site, waLink } from "@/lib/site";
 import { artMap, TumpalBorder, WhatsAppIcon } from "./Art";
 import { SectionHead, Shell } from "./Section";
@@ -32,7 +34,18 @@ export default function MenuBoard() {
               >
                 <div className="relative">
                   <div className="overflow-hidden rounded-2xl bg-sand/70">
-                    {Art ? <Art className="h-auto w-full" /> : null}
+                    {m.foto ? (
+                      <Image
+                        src={m.foto}
+                        alt={m.fotoAlt ?? m.nama}
+                        width={1000}
+                        height={338}
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                        className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    ) : Art ? (
+                      <Art className="h-auto w-full" />
+                    ) : null}
                   </div>
                   {m.label ? (
                     <span className="absolute top-3 left-3 rounded-full bg-forest px-3 py-1 text-[0.62rem] font-semibold tracking-[0.12em] text-honey uppercase">

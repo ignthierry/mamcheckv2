@@ -31,6 +31,9 @@ export type Disain = {
   hargaViaAdmin?: boolean;
   label?: string;
   art: string;
+  /** foto asli (di /public) — dipakai kalau ada, menggantikan ilustrasi SVG */
+  foto?: string;
+  fotoAlt?: string;
   catatan?: string;
 };
 
@@ -49,9 +52,12 @@ export const menu: Disain[] = [
     id: "sate-manis-ayam",
     nama: "Sate Manis Ayam",
     deskripsi:
-      "Potongan ayam berbumbu manis legit, ditusuk rapi lalu dibakar arang hingga harum sedap.",
+      "Paha ayam segar dimarinasi bumbu, ditusuk rapi lalu dipanggang di atas arang sampai harum — disajikan dengan sambal kecap pedas dan limau.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "sate",
+    foto: "/menu/sate-manis-ayam.webp",
+    fotoAlt:
+      "Sate manis ayam MamCheck dipanggang dengan arang, disajikan di atas daun pisang bersama sambal kecap pedas dan limau",
     catatan: "Siap santap • pengiriman area lokal",
   },
   {
