@@ -1,34 +1,30 @@
 import { site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "./Art";
-import HeroCloth from "./HeroCloth";
 import { Shell } from "./Section";
 
 const fakta = ["Halal, tanpa pengawet", "Bumbu digerus hari itu", "Ambil sendiri atau kirim ±25 km"];
 
 export default function Hero() {
   return (
-    <section id="atas" className="relative overflow-hidden">
-      {/* latar: kain noren ThreeUI bergerak */}
-      <HeroCloth />
-
-      {/* selubung cream supaya teks terbaca di atas kain */}
+    <section id="atas" className="relative overflow-hidden border-b border-gold/20">
+      {/* satu blok warna lembut sebagai pengganti media hero */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-cream/90 via-cream/55 to-cream/20"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-cream/90 via-cream/55 to-transparent lg:block"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_15%_0%,#f6ecd9_0%,rgba(247,240,227,0)_62%)]"
       />
 
-      <Shell className="relative flex min-h-[30rem] flex-col justify-center py-14 sm:min-h-[34rem] sm:py-20 lg:min-h-[38rem]">
-        <h1 className="max-w-2xl font-display text-[2.1rem] leading-[1.08] tracking-tight text-forest sm:text-5xl lg:text-[3.3rem]">
+      <Shell className="relative flex min-h-[26rem] flex-col justify-center py-16 sm:min-h-[30rem] sm:py-20 lg:min-h-[32rem]">
+        <p className="text-[0.72rem] font-semibold tracking-[0.24em] text-gold uppercase">
+          {site.city} · made by order
+        </p>
+
+        <h1 className="mt-4 max-w-3xl font-display text-[2.2rem] leading-[1.06] tracking-tight text-forest sm:text-5xl lg:text-[3.5rem]">
           Masakan Bali rumahan, dimasak setelah kamu pesan.
         </h1>
 
-        <p className="mt-5 max-w-xl text-[1rem] leading-relaxed text-moss/90">
-          Ayam betutu, sate lilit, tim ayam, sampai soup iga — diolah dadakan di dapur {site.city}
-          {" "}dan dikirim hari itu juga.
+        <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-moss/90">
+          Ayam betutu, sate lilit, tim ayam, sampai soup iga — diolah dadakan di dapur {site.city}{" "}
+          dan dikirim hari itu juga.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -49,7 +45,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2">
+        <ul className="mt-9 flex flex-wrap gap-x-5 gap-y-2">
           {fakta.map((f) => (
             <li key={f} className="flex items-center gap-2 text-[0.84rem] font-medium text-moss">
               <span aria-hidden="true" className="h-1.5 w-1.5 rotate-45 bg-gold" />
@@ -57,10 +53,6 @@ export default function Hero() {
             </li>
           ))}
         </ul>
-
-        <p className="mt-10 max-w-md text-[0.72rem] leading-relaxed text-moss/60">
-          Kain noren di latar halaman ini bergerak selama dapur masih mengerjakan pesanan hari ini.
-        </p>
       </Shell>
     </section>
   );
