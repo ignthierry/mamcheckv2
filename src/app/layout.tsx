@@ -49,7 +49,7 @@ const jsonLd = {
     "Dapur rumahan masakan Bali. Made by order: ayam betutu, sate manis ayam, sate lilit, tim ayam, soup iga, dan Kacang Bali.",
   servesCuisine: ["Balinese", "Indonesian"],
   address: { "@type": "PostalAddress", streetAddress: site.alamat, addressCountry: "ID" },
-  areaServed: site.city,
+  areaServed: ["Pasuruan", "Sidoarjo"],
   openingHours: site.jam,
   telephone: `+${site.whatsapp}`,
   hasMenu: "#menu",

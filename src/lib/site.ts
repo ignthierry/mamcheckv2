@@ -14,7 +14,8 @@ export const site = {
   alamat:
     "Jl. Lapangan Tembak, Dsn. Ngelawang, Watukosek No. 36, RT 003/RW 001, Gempol, Pasuruan",
   mapsQuery: "Jl. Lapangan Tembak, Watukosek, Gempol, Pasuruan",
-  radius: "radius ±10 km dari dapur (kurir instan / sameday)", // TODO: radius asli
+  /** ringkasan pengiriman — dipakai di blok pengiriman & footer */
+  kirimRingkas: "Pasuruan & Sidoarjo · radius ±25 km",
 };
 
 export function waLink(message?: string) {
@@ -25,6 +26,7 @@ export function waLink(message?: string) {
 export type Disain = {
   id: string;
   nama: string;
+  /** satu kalimat saja — halaman ini dibaca di HP */
   deskripsi: string;
   /** varian yang bisa dipilih pembeli */
   opsi: string[];
@@ -35,97 +37,73 @@ export type Disain = {
   /** foto asli (di /public) — dipakai kalau ada, menggantikan ilustrasi SVG */
   foto?: string;
   fotoAlt?: string;
-  catatan?: string;
 };
 
 export const menu: Disain[] = [
   {
     id: "ayam-betutu",
     nama: "Ayam Betutu",
-    deskripsi:
-      "Ayam dibalut base genep khas Bali, dikukus lalu dipanggang dalam balutan daun pisang sampai bumbu meresap ke tulang.",
+    deskripsi: "Ayam berbumbu base genep, dikukus lalu dipanggang dalam balutan daun pisang.",
     opsi: ["Original (gurih)", "Pedas khas Bali"],
     label: "Paling dicari",
     art: "betutu",
-    catatan: "Siap santap • pengiriman area lokal",
   },
   {
     id: "sate-manis-ayam",
     nama: "Sate Manis Ayam",
-    deskripsi:
-      "Paha ayam segar dimarinasi bumbu, ditusuk rapi lalu dipanggang di atas arang sampai harum — disajikan dengan sambal kecap pedas dan limau.",
+    deskripsi: "Paha ayam dimarinasi bumbu, dipanggang arang, disajikan dengan sambal kecap & limau.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "sate",
     foto: "/menu/sate-manis-ayam.webp",
     fotoAlt:
       "Sate manis ayam MamCheck dipanggang dengan arang, disajikan di atas daun pisang bersama sambal kecap pedas dan limau",
-    catatan: "Siap santap • pengiriman area lokal",
   },
   {
     id: "sate-lilit",
     nama: "Sate Lilit",
-    deskripsi:
-      "Daging dicampur bumbu dan kelapa parut, dililitkan pada batang serai — aroma wangi waktu dibakar.",
+    deskripsi: "Daging bumbu kelapa dililitkan pada batang serai, dibakar sampai wangi.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "lilit",
-    catatan: "Siap santap • pengiriman area lokal",
   },
   {
     id: "tim-ayam",
     nama: "Tim Ayam",
-    deskripsi:
-      "Ayam dikukus perlahan dengan jahe, jeruk limau, dan bumbu ringan. Kuah bening, rasa bersih, cocok untuk yang sedang kurang enak badan.",
+    deskripsi: "Ayam dikukus dengan jahe dan limau — kuah bening, ringan, cocok saat kurang enak badan.",
     opsi: ["Paha bawah", "Dada"],
     label: "Ringan & hangat",
     art: "tim",
-    catatan: "Siap santap • pengiriman area lokal",
   },
   {
     id: "soup-iga",
     nama: "Soup Iga",
-    deskripsi:
-      "Iga sapi direbus lambat berjam-jam dengan rempah, kuah bening kaldu dalam sampai daging lepas dari tulang.",
+    deskripsi: "Iga sapi direbus lambat berjam-jam sampai daging lepas dari tulang.",
     opsi: ["Porsi reguler", "Porsi jumbo"],
     art: "soup",
-    catatan: "Siap santap • pengiriman area lokal",
   },
   {
     id: "kacang-bali",
     nama: "Kacang Bali",
-    deskripsi:
-      "Kacang tanah sangrai dengan bumbu khas Bali: gurih, pedas, sedikit manis. Tahan lama, jadi oleh-oleh paling aman dibawa jauh.",
+    deskripsi: "Kacang tanah sangrai bumbu Bali: gurih, pedas, sedikit manis. Tahan lama.",
     opsi: ["200 gram", "500 gram", "1 kg"],
     label: "Bisa kirim luar kota",
     hargaViaAdmin: true,
     art: "kacang",
-    catatan: "Ekspedisi antar kota",
   },
 ];
 
-export const faq: { q: string; a: string }[] = [
+/** tiga baris pengiriman */
+export const kirim = [
   {
-    q: "Kenapa Kacang Bali tidak ada harganya?",
-    a: "Harga Kacang Bali menyesuaikan ukuran kemasan dan jumlah pesanan. Admin akan hitungkan harga terbaik begitu kamu sebutkan ukuran dan jumlahnya di WhatsApp.",
+    judul: "Pasuruan & Sidoarjo",
+    isi: "Kurir instan / sameday, radius ±25 km dari dapur.",
   },
   {
-    q: "Apakah makanan bisa dikirim ke luar kota?",
-    a: "Untuk sekarang tidak. Ayam Betutu, sate, tim ayam, dan soup iga hanya untuk area lokal karena disajikan matang siap santap dan paling enak dimakan segar. Kacang Bali justru aman dikirim antar kota pakai ekspedisi.",
+    judul: "Ambil sendiri",
+    isi: "Gratis, langsung di dapur — Watukosek, Gempol.",
   },
   {
-    q: "Berapa lama pesanan dibuat?",
-    a: "Semua dimasak setelah pesanan masuk (made by order), jadi bukan stok simpanan. Untuk pesanan porsi besar atau acara, mohon konfirmasi minimal H-1 agar dapur bisa menyiapkan bumbu dan jadwal masak.",
-  },
-  {
-    q: "Ayam Betutu ada level pedasnya?",
-    a: "Ada dua pilihan: Original yang gurih dan Pedas khas Bali. Sebutkan saat chat supaya admin catat di pesananmu.",
-  },
-  {
-    q: "Apakah bisa memesan untuk acara keluarga?",
-    a: "Bisa. Ceritakan jumlah porsi, tanggal, dan lokasi acaranya via WhatsApp — admin akan bantu hitung kebutuhan porsi dan waktu pengirimannya.",
-  },
-  {
-    q: "Bagaimana cara pembayarannya?",
-    a: "Transfer bank atau e-wallet. Untuk pesanan dalam jumlah besar, berlaku DP terlebih dahulu sebagai tanda pesanan diproses.",
+    judul: "Frozen & Kacang Bali",
+    isi: "Bisa dikirim lebih jauh, atau pakai paket kargo.",
   },
 ];
 
@@ -133,39 +111,43 @@ export const langkah = [
   {
     no: "01",
     judul: "Chat admin",
-    isi: "Klik tombol WhatsApp, sebutkan menu, jumlah, tanggal, dan alamat pengiriman.",
+    isi: "Sebutkan menu, jumlah, tanggal, dan alamat.",
   },
   {
     no: "02",
-    judul: "Konfirmasi pesanan",
-    isi: "Admin cek ketersediaan bahan, jadwal masak, dan biaya kirim. Semua dihitung di chat.",
+    judul: "Admin hitung",
+    isi: "Ongkir, jadwal masak, dan total dibahas di chat.",
   },
   {
     no: "03",
-    judul: "Dapur mulai masak",
-    isi: "Setelah pesanan dikonfirmasi dan pembayaran/DP diterima, bahan disiapkan dan dimasak hari itu.",
-  },
-  {
-    no: "04",
-    judul: "Sampai di meja",
-    isi: "Diambil sendiri, dikirim kurir area lokal, atau dikemas rapi untuk ekspedisi (kacang Bali).",
+    judul: "Dapur masak",
+    isi: "Dimasak hari itu juga, lalu dikirim atau diambil.",
   },
 ];
 
-export const momen = [
+export const faq: { q: string; a: string }[] = [
   {
-    judul: "Kumpul keluarga",
-    isi: "Nampan besar isi betutu, sate, dan soup iga untuk makan bersama di rumah.",
-    art: "betutu",
+    q: "Kenapa tidak ada daftar harga?",
+    a: "Harga menyesuaikan ukuran dan jumlah pesanan, termasuk Kacang Bali. Admin hitungkan begitu kamu sebutkan menu dan jumlahnya.",
   },
   {
-    judul: "Syukuran & arisan",
-    isi: "Pesanan jumlah banyak dengan jadwal masak yang diatur supaya datang pas waktu acara.",
-    art: "sate",
+    q: "Bisa dikirim ke luar kota?",
+    a: "Untuk masakan siap santap hanya Pasuruan & Sidoarjo (radius ±25 km). Frozen dan Kacang Bali bisa lebih jauh lewat paket kargo.",
   },
   {
-    judul: "Oleh-oleh luar kota",
-    isi: "Kacang Bali dikemas kuat, dikirim ekspedisi, sampai dalam kondisi utuh.",
-    art: "kacang",
+    q: "Berapa lama pesanan dibuat?",
+    a: "Semua dimasak setelah pesanan masuk. Untuk porsi besar atau acara, konfirmasi minimal H-1.",
+  },
+  {
+    q: "Bisa ambil sendiri di dapur?",
+    a: "Bisa dan gratis. Alamat dapur ada di bagian kontak bawah halaman ini.",
+  },
+  {
+    q: "Ayam Betutu ada level pedasnya?",
+    a: "Ada dua: Original yang gurih dan Pedas khas Bali. Sebutkan saat chat.",
+  },
+  {
+    q: "Bagaimana pembayarannya?",
+    a: "Transfer bank atau e-wallet. Untuk pesanan besar, berlaku DP sebagai tanda pesanan diproses.",
   },
 ];
