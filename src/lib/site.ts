@@ -6,13 +6,14 @@
 export const site = {
   brand: "MamCheck",
   tagline: "Masakan Bali rumahan — made by order",
-  city: "Sidoarjo", // TODO: kota asli
+  city: "Gempol, Pasuruan",
   whatsapp: "6282142312999", // nomor WA admin format 62xxx (tanpa + / 0 / spasi)
   whatsappDisplay: "+62 821-4231-2999", // tampilan nomor untuk pelanggan
   instagram: "https://instagram.com/", // TODO: akun IG
   jam: "Setiap hari, 08.00 – 20.00 WIB", // TODO: jam operasional
-  alamat: "Jl. Contoh No. 00, Sidoarjo, Jawa Timur", // TODO: alamat dapur
-  mapsQuery: "Sidoarjo, Jawa Timur", // TODO: titik Maps (nama tempat / alamat)
+  alamat:
+    "Jl. Lapangan Tembak, Dsn. Ngelawang, Watukosek No. 36, RT 003/RW 001, Gempol, Pasuruan",
+  mapsQuery: "Jl. Lapangan Tembak, Watukosek, Gempol, Pasuruan",
   radius: "radius ±10 km dari dapur (kurir instan / sameday)", // TODO: radius asli
 };
 
