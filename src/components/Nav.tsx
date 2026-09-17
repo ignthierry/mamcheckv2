@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "./Art";
 
@@ -12,13 +13,16 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
   const dark = tone === "dark";
   return (
     <span className="flex items-center gap-2">
-      <span
-        className={`grid h-9 w-9 place-items-center rounded-lg border ${
-          dark ? "border-gold/50 bg-forest text-honey" : "border-goldsoft/60 bg-cream text-forest"
-        }`}
-      >
-        <span className="font-display text-[1.2rem] leading-none font-semibold">M</span>
-      </span>
+      <Image
+        src={dark ? "/logo/mamcheck-avatar.png" : "/logo/mamcheck-avatar-light.png"}
+        alt="Logo Olshop MamCheck"
+        width={96}
+        height={96}
+        sizes="36px"
+        quality={95}
+        priority
+        className="h-9 w-9 shrink-0 rounded-full"
+      />
       <span className="leading-none">
         <span
           className={`block font-display text-[1.2rem] font-semibold tracking-tight ${
