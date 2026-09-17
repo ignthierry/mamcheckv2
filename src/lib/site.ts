@@ -70,6 +70,9 @@ export const menu: Disain[] = [
     deskripsi: "Daging bumbu kelapa dililitkan pada batang serai, dibakar sampai wangi.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "lilit",
+    foto: "/menu/sate-lilit.webp",
+    fotoAlt:
+      "Sate lilit Bali — daging berbumbu kelapa dililitkan pada batang bambu, dibakar di atas arang, disajikan di atas daun pisang dalam tampah bambu",
   },
   {
     id: "tim-ayam",
