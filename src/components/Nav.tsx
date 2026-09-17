@@ -16,12 +16,12 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
       <Image
         src={dark ? "/logo/mamcheck-avatar.png" : "/logo/mamcheck-avatar-light.png"}
         alt="Logo Olshop MamCheck"
-        width={96}
-        height={96}
-        sizes="36px"
+        width={512}
+        height={435}
+        sizes="56px"
         quality={95}
         priority
-        className="h-9 w-9 shrink-0 rounded-full"
+        className="h-[46px] w-[54px] shrink-0 rounded-xl"
       />
       <span className="leading-none">
         <span
