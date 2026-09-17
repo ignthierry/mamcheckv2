@@ -6,7 +6,9 @@ export default function CtaBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/30 bg-cream/95 px-4 py-3 backdrop-blur-md lg:hidden">
       <a
-        href={waLink(`Halo ${site.brand}, saya mau pesan.`)}
+        href={waLink(
+          `Halo ${site.brand}, saya mau pesan masakan Bali.\n\nMenu: \nJumlah: \nTanggal: \nAlamat: `,
+        )}
         target="_blank"
         rel="noopener noreferrer"
         className="flex w-full items-center justify-center gap-2 rounded-full bg-forest py-3.5 text-[0.92rem] font-semibold text-cream"

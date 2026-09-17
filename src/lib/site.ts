@@ -29,6 +29,35 @@ export function waLink(message?: string) {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
 
+/* ---------------------------------------------------------------
+ * Template WhatsApp — isi pesannya selalu mengikuti apa yang diklik:
+ * pesan menu, varian yang dipilih, atau pertanyaan yang sedang dibaca.
+ * ------------------------------------------------------------- */
+
+/** Pesan satu menu, sekaligus variannya kalau pil opsi yang diklik. */
+export function waPesan(menu: string, opsi?: string) {
+  return waLink(
+    `Halo ${site.brand}, saya mau pesan *${menu}*${opsi ? ` — ${opsi}` : ""}.\n\nJumlah: \nTanggal: \nAlamat: `,
+  );
+}
+
+/** Kacang Bali / frozen — harga dihitung admin. */
+export function waTanyaHarga(menu: string, opsi?: string) {
+  return waLink(
+    `Halo ${site.brand}, mau tanya harga *${menu}*${opsi ? ` — ${opsi}` : ""}.\n\nJumlah: \nAlamat: `,
+  );
+}
+
+/** Pertanyaan spesifik: satu baris pengiriman atau satu kartu layanan. */
+export function waTanya(tema: string, detail = "") {
+  return waLink(`Halo ${site.brand}, mau tanya ${tema}.\n\n${detail}`);
+}
+
+/** Pertanyaan yang mengutip satu FAQ yang sedang dibuka. */
+export function waTanyaSoal(pertanyaan: string) {
+  return waLink(`Halo ${site.brand}, mau tanya soal:\n"${pertanyaan}"\n\n`);
+}
+
 export type Disain = {
   id: string;
   nama: string;
@@ -120,36 +149,52 @@ export const layanan = [
   {
     judul: "Catering harian & kantor",
     isi: "Menu Bali dalam porsi tray atau per orang untuk makan siang tim, arisan, dan rapat kantor. Mulai 10 porsi, konfirmasi H-1.",
-    cta: "Halo MamCheck, mau tanya catering untuk … porsi, tanggal …",
+    cta: "catering harian/kantor",
+    ctaDetail: "Jumlah porsi: \nTanggal: \nLokasi antar: ",
+    ctaLabel: "Tanya catering",
     label: "Mulai 10 porsi",
   },
   {
     judul: "Nasi kotak",
     isi: "Nasi kotak siap antar untuk rapat, syukuran, dan pembagian ke warga. Lauk dapat dipilih: betutu, sate, tum ayam, atau soup iga.",
-    cta: "Halo MamCheck, mau pesan nasi kotak … kotak untuk tanggal …",
+    cta: "nasi kotak",
+    ctaDetail: "Jumlah kotak: \nTanggal: \nAlamat antar: \nPilihan lauk: ",
+    ctaLabel: "Tanya nasi kotak",
     label: "Bisa pilih lauk",
   },
   {
     judul: "Hajatan & acara keluarga",
     isi: "Pesanan porsi besar untuk pernikahan, selamatan, dan hajatan. Jadwal masak serta pengiriman disusun bersama admin.",
-    cta: "Halo MamCheck, ada hajatan tanggal …, mau tanya menu dan estimasi biaya.",
+    cta: "hajatan / acara keluarga",
+    ctaDetail:
+      "Tanggal acara: \nPerkiraan jumlah tamu: \nLokasi: \nMenu yang dibayangkan: ",
+    ctaLabel: "Tanya hajatan",
     label: "Diskusi jadwal",
   },
 ];
 
-/** tiga baris pengiriman */
+/** tiga baris pengiriman — masing-masing punya template pertanyaannya sendiri */
 export const kirim = [
   {
     judul: "Pasuruan & Sidoarjo",
     isi: "Kurir instan/sameday, radius ±25 km dari dapur.",
+    waTema: "ongkos kirim ke alamat saya (Pasuruan/Sidoarjo)",
+    waDetail: "Alamat lengkap: \nJumlah pesanan: \nTanggal: ",
+    waLabel: "Tanya ongkir",
   },
   {
     judul: "Ambil sendiri",
     isi: "Gratis, langsung di dapur Watukosek, Gempol.",
+    waTema: "ambil sendiri di dapur Watukosek",
+    waDetail: "Rencana ambil: (tanggal & jam) \nPesanan: ",
+    waLabel: "Atur waktu ambil",
   },
   {
     judul: "Frozen & Kacang Bali",
     isi: "Dapat dikirim lebih jauh melalui paket kargo.",
+    waTema: "kirim frozen / Kacang Bali ke luar kota",
+    waDetail: "Kota tujuan: \nJumlah: ",
+    waLabel: "Tanya kirim luar kota",
   },
 ];
 

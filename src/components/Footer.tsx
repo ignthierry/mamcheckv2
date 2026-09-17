@@ -21,7 +21,9 @@ export default function Footer() {
             </p>
             <div className="mt-5 flex gap-2.5">
               <a
-                href={waLink(`Halo ${site.brand}, saya mau pesan.`)}
+                href={waLink(
+                  `Halo ${site.brand}, mau tanya menu & jadwal hari ini.\n\nRencana pesan: `,
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-[0.85rem] font-semibold text-ink transition-colors hover:bg-goldsoft"
@@ -47,7 +49,7 @@ export default function Footer() {
                 WhatsApp
               </span>
               <a
-                href={waLink()}
+                href={waLink(`Halo ${site.brand}, mau tanya.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-cream underline decoration-goldsoft/50 underline-offset-4"

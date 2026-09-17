@@ -1,4 +1,4 @@
-import { faq, site, waLink } from "@/lib/site";
+import { faq, waTanya, waTanyaSoal } from "@/lib/site";
 import { ChevronIcon, WhatsAppIcon } from "./Art";
 import { CeplokField } from "./Bali";
 import { SectionHead, Shell } from "./Section";
@@ -26,6 +26,15 @@ export default function Faq() {
               <p className="mt-2.5 text-[0.9rem] leading-relaxed text-moss/85">
                 {f.a}
               </p>
+              <a
+                href={waTanyaSoal(f.q)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-1 text-[0.8rem] font-semibold text-forest underline decoration-gold/60 decoration-2 underline-offset-4 hover:text-gold"
+              >
+                Tanya soal ini
+                <WhatsAppIcon className="h-3.5 w-3.5" />
+              </a>
             </details>
           ))}
         </div>
@@ -33,7 +42,10 @@ export default function Faq() {
         <p className="mt-6 text-[0.85rem] text-moss/75">
           Belum terjawab?{" "}
           <a
-            href={waLink(`Halo ${site.brand}, saya mau tanya-tanya dulu ya.`)}
+            href={waTanya(
+              "hal lain soal menu, pengantaran, atau pesanan besar",
+              "Pertanyaan saya: ",
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-semibold text-forest underline decoration-gold/60 decoration-2 underline-offset-4 hover:text-gold"

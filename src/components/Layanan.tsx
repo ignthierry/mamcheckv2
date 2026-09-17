@@ -1,4 +1,4 @@
-import { layanan, site, waLink } from "@/lib/site";
+import { layanan, waTanya } from "@/lib/site";
 import { WhatsAppIcon } from "./Art";
 import { CeplokField, Kamboja } from "./Bali";
 import { SectionHead, Shell } from "./Section";
@@ -33,12 +33,13 @@ export default function Layanan() {
                 {l.isi}
               </p>
               <a
-                href={waLink(l.cta)}
+                href={waTanya(l.cta, l.ctaDetail)}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${l.ctaLabel}: ${l.judul}`}
                 className="mt-5 inline-flex w-fit items-center gap-1.5 text-[0.85rem] font-semibold text-forest underline decoration-gold/60 decoration-2 underline-offset-4 transition-colors hover:text-gold"
               >
-                Tanya admin
+                {l.ctaLabel}
                 <WhatsAppIcon className="h-3.5 w-3.5" />
               </a>
             </article>
@@ -49,8 +50,9 @@ export default function Layanan() {
           Untuk hajatan, sebaiknya menghubungi lebih awal agar jadwal dapur dan
           pengiriman dapat disiapkan —{" "}
           <a
-            href={waLink(
-              `Halo ${site.brand}, mau tanya jadwal catering / nasi kotak / hajatan. Tanggal acara saya …`,
+            href={waTanya(
+              "jadwal catering / nasi kotak / hajatan",
+              "Tanggal acara: \nPerkiraan jumlah tamu: \nLokasi: ",
             )}
             target="_blank"
             rel="noopener noreferrer"

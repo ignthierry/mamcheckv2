@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { menu, site, waLink } from "@/lib/site";
+import { menu, waPesan, waTanyaHarga } from "@/lib/site";
 import { artMap, WhatsAppIcon } from "./Art";
 import { SectionHead, Shell } from "./Section";
 
@@ -52,27 +52,36 @@ export default function MenuBoard() {
                   {m.deskripsi}
                 </p>
 
+                {/* pil opsi = tombol pesan: pilihannya ikut terbawa ke WhatsApp */}
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {m.opsi.map((o) => (
-                    <span
+                    <a
                       key={o}
-                      className="rounded-full border border-moss/20 px-2.5 py-1 text-[0.7rem] font-medium text-moss"
+                      href={
+                        m.hargaViaAdmin
+                          ? waTanyaHarga(m.nama, o)
+                          : waPesan(m.nama, o)
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${m.hargaViaAdmin ? "Tanya harga" : "Pesan"} ${m.nama} ${o}`}
+                      className="cursor-pointer rounded-full border border-moss/25 bg-sand/60 px-2.5 py-1 text-[0.7rem] font-medium text-moss transition-colors hover:border-gold hover:bg-gold/25 hover:text-forest"
                     >
                       {o}
-                    </span>
+                    </a>
                   ))}
                 </div>
 
                 <a
-                  href={waLink(
-                    `Halo ${site.brand}, saya mau pesan *${m.nama}*.\nJumlah & pilihan: \nTanggal: \nAlamat: `,
-                  )}
+                  href={
+                    m.hargaViaAdmin ? waTanyaHarga(m.nama) : waPesan(m.nama)
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[0.85rem] font-semibold text-forest underline decoration-gold/60 decoration-2 underline-offset-4 transition-colors hover:text-gold"
                 >
                   <WhatsAppIcon className="h-4 w-4" />
-                  {m.hargaViaAdmin ? "Tanya harga" : "Pesan"}
+                  {m.hargaViaAdmin ? "Tanya harga" : `Pesan ${m.nama}`}
                 </a>
               </article>
             );

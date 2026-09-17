@@ -19,7 +19,7 @@ function Aksi({ terang }: { terang: boolean }) {
       <div className="mt-8 flex flex-wrap items-center gap-3">
         <a
           href={pesanAwal(
-            `Halo ${site.brand}, saya mau pesan masakan Bali. Boleh dibantu?`,
+            `Halo ${site.brand}, saya mau pesan masakan Bali.\n\nMenu: \nJumlah: \nTanggal: \nAlamat: `,
           )}
           target="_blank"
           rel="noopener noreferrer"

@@ -68,7 +68,9 @@ export default function Nav() {
         </nav>
 
         <a
-          href={waLink(`Halo ${site.brand}, saya mau pesan.`)}
+          href={waLink(
+            `Halo ${site.brand}, saya mau pesan masakan Bali. Mohon dibantu cek ketersediaan hari ini.\n\nMenu: \nJumlah: \nTanggal: `,
+          )}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2.5 text-[0.82rem] font-semibold text-cream transition-colors hover:bg-moss sm:px-5"
