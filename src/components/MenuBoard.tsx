@@ -10,8 +10,8 @@ export default function MenuBoard() {
       <Shell className="py-14 sm:py-20">
         <SectionHead
           eyebrow="Menu"
-          title="Enam masakan, dibuat setelah pesanan masuk."
-          lead={`Tulis menu, jumlah, tanggal, dan alamat di WhatsApp — admin hitungkan totalnya termasuk ongkir.`}
+          title="Enam sajian khas Bali, dimasak setelah pesanan masuk."
+          lead="Sampaikan menu, jumlah, tanggal, dan alamat melalui WhatsApp — admin menghitung total termasuk ongkos kirim."
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

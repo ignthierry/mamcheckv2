@@ -1,15 +1,19 @@
 import { layanan, site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "./Art";
+import { CeplokField, Kamboja } from "./Bali";
 import { SectionHead, Shell } from "./Section";
 
 export default function Layanan() {
   return (
-    <section id="catering" className="relative">
-      <Shell className="py-14 sm:py-20">
+    <section id="catering" className="relative overflow-hidden">
+      <CeplokField id="ceplok-layanan" className="text-forest/[0.055]" />
+      <Kamboja className="pointer-events-none absolute top-12 right-4 h-20 w-20 text-gold/15 sm:h-28 sm:w-28" />
+
+      <Shell className="relative py-14 sm:py-20">
         <SectionHead
           eyebrow="Pesanan besar"
           title="Menerima catering, nasi kotak, dan hajatan."
-          lead="Selain pesanan harian, dapur MamCheck melayani porsi besar. Sebutkan tanggal, jumlah, dan lokasi — admin bantu susun menu dan hitung totalnya."
+          lead="Selain pesanan harian, dapur MamCheck melayani pesanan porsi besar. Sampaikan tanggal, jumlah, dan lokasi — admin menyusun menu beserta perhitungannya."
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
@@ -42,8 +46,8 @@ export default function Layanan() {
         </div>
 
         <p className="mt-6 text-[0.85rem] text-moss/75">
-          Untuk hajatan, sebaiknya hubungi lebih awal supaya jadwal dapur dan
-          pengiriman bisa disiapkan —{" "}
+          Untuk hajatan, sebaiknya menghubungi lebih awal agar jadwal dapur dan
+          pengiriman dapat disiapkan —{" "}
           <a
             href={waLink(
               `Halo ${site.brand}, mau tanya jadwal catering / nasi kotak / hajatan. Tanggal acara saya …`,

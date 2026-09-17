@@ -1,12 +1,13 @@
 import { site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "./Art";
+import { PolengTrim } from "./Bali";
 import { Shell } from "./Section";
 
 const fakta = [
   "Halal, tanpa pengawet",
-  "Bumbu digerus hari itu",
-  "Ambil sendiri atau kirim ±25 km",
-  "Terima catering, nasi kotak & hajatan",
+  "Bumbu base genep digerus harian",
+  "Antar Pasuruan & Sidoarjo ±25 km",
+  "Melayani catering, nasi kotak & hajatan",
 ];
 
 const pesanAwal = (isi: string) => waLink(isi);
@@ -91,17 +92,23 @@ export default function Hero() {
 
         <Shell className="relative flex min-h-[34rem] flex-col justify-end py-16 sm:min-h-[38rem] sm:py-20 lg:min-h-[42rem] lg:justify-center">
           <p className="text-[0.72rem] font-semibold tracking-[0.24em] text-goldsoft uppercase [text-shadow:0_2px_10px_rgba(7,33,26,0.75)]">
-            {site.city} · made by order
+            {site.city} · dapur Bali rumahan
           </p>
           <h1 className="mt-4 max-w-3xl font-display text-[2.2rem] leading-[1.06] tracking-tight text-cream [text-shadow:0_3px_18px_rgba(7,33,26,0.7)] sm:text-5xl lg:text-[3.5rem]">
-            Masakan Bali rumahan, dimasak setelah kamu pesan.
+            Cita rasa Bali, dimasak segar setelah pesanan Anda masuk.
           </h1>
           <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-honey/95 [text-shadow:0_2px_12px_rgba(7,33,26,0.8)]">
-            Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan
-            di dapur {site.city} dan dikirim hari itu juga.
+            Ayam betutu berbumbu base genep, sate lilit batang bambu, tum ayam,
+            hingga soup iga — bumbu digerus harian di dapur {site.city}, lalu
+            diantar dalam kondisi hangat.
           </p>
           <Aksi terang />
         </Shell>
+
+        <PolengTrim
+          id="poleng-hero"
+          className="absolute inset-x-0 bottom-0 z-10"
+        />
       </section>
     );
   }
@@ -119,17 +126,23 @@ export default function Hero() {
 
       <Shell className="relative flex min-h-[26rem] flex-col justify-center py-16 sm:min-h-[30rem] sm:py-20 lg:min-h-[32rem]">
         <p className="text-[0.72rem] font-semibold tracking-[0.24em] text-gold uppercase">
-          {site.city} · made by order
+          {site.city} · dapur Bali rumahan
         </p>
         <h1 className="mt-4 max-w-3xl font-display text-[2.2rem] leading-[1.06] tracking-tight text-forest sm:text-5xl lg:text-[3.5rem]">
-          Masakan Bali rumahan, dimasak setelah kamu pesan.
+          Cita rasa Bali, dimasak segar setelah pesanan Anda masuk.
         </h1>
         <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-moss/90">
-          Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan di
-          dapur {site.city} dan dikirim hari itu juga.
+          Ayam betutu berbumbu base genep, sate lilit batang bambu, tum ayam,
+          hingga soup iga — bumbu digerus harian di dapur {site.city}, lalu
+          diantar dalam kondisi hangat.
         </p>
         <Aksi terang={false} />
       </Shell>
+
+      <PolengTrim
+        id="poleng-hero-teks"
+        className="absolute inset-x-0 bottom-0"
+      />
     </section>
   );
 }

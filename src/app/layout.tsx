@@ -20,9 +20,9 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   alternates: { canonical: "/" },
-  title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
+  title: `${site.brand} — Masakan Bali Rumahan & Catering di Gempol, Pasuruan`,
   description:
-    "Ayam betutu, sate manis, sate lilit, tum ayam, soup iga, dan Kacang Bali. Semua dimasak setelah pesanan masuk. Terima catering, nasi kotak, dan hajatan. Pesan langsung via WhatsApp.",
+    "Masakan Bali rumahan yang dimasak setelah pesanan masuk: ayam betutu berbumbu base genep, sate lilit, tum ayam, soup iga, dan Kacang Bali. Melayani catering, nasi kotak, dan hajatan untuk Pasuruan & Sidoarjo. Pesan melalui WhatsApp.",
   keywords: [
     "masakan Bali",
     "ayam betutu",
@@ -38,18 +38,18 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     url: site.url,
-    title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
+    title: `${site.brand} — Masakan Bali Rumahan & Catering di Gempol, Pasuruan`,
     description:
-      "Dapur rumahan masakan Bali. Made by order, bumbu segar, siap santap untuk area lokal. Terima catering, nasi kotak, dan hajatan.",
+      "Dapur Bali rumahan di Gempol, Pasuruan. Bumbu digerus harian, pesanan dimasak setelah masuk. Melayani catering, nasi kotak, dan hajatan.",
     type: "website",
     locale: "id_ID",
     siteName: site.brand,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
+    title: `${site.brand} — Masakan Bali Rumahan & Catering di Gempol, Pasuruan`,
     description:
-      "Dapur rumahan masakan Bali. Made by order, bumbu segar, siap santap untuk area lokal, Kacang Bali bisa kirim antar kota.",
+      "Dapur Bali rumahan di Gempol, Pasuruan. Bumbu digerus harian, pesanan dimasak setelah masuk. Melayani catering, nasi kotak, dan hajatan.",
   },
   robots: { index: true, follow: true },
 };
@@ -65,7 +65,7 @@ const jsonLd = {
   ],
   logo: `${site.url}/logo/mamcheck-avatar.png`,
   description:
-    "Dapur rumahan masakan Bali. Made by order: ayam betutu, sate manis ayam, sate lilit, tum ayam, soup iga, dan Kacang Bali.",
+    "Dapur Bali rumahan di Gempol, Pasuruan: ayam betutu berbumbu base genep, sate manis ayam, sate lilit, tum ayam, soup iga, dan Kacang Bali. Melayani catering, nasi kotak, dan hajatan.",
   servesCuisine: ["Balinese", "Indonesian"],
   priceRange: "Rp",
   address: {

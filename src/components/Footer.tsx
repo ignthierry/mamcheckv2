@@ -1,19 +1,23 @@
 import { site, waLink } from "@/lib/site";
 import { InstagramIcon, WhatsAppIcon } from "./Art";
+import { Kamboja, PolengTrim } from "./Bali";
 import { Logo } from "./Nav";
 import { Shell } from "./Section";
 
 export default function Footer() {
   const tahun = new Date().getFullYear();
   return (
-    <footer className="relative bg-forest text-cream">
-      <Shell className="py-12">
+    <footer className="relative overflow-hidden bg-forest text-cream">
+      <PolengTrim id="poleng-footer" className="absolute inset-x-0 top-0" />
+      <Kamboja className="pointer-events-none absolute -right-6 -bottom-8 h-48 w-48 text-goldsoft/10" />
+
+      <Shell className="relative py-12 pt-14">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <Logo tone="light" />
             <p className="mt-4 max-w-xs text-[0.88rem] leading-relaxed text-honey/80">
-              Dapur rumahan masakan Bali. Semua menu dibuat setelah pesanan
-              masuk.
+              Dapur rumahan masakan Bali di Gempol, Pasuruan. Seluruh menu
+              dimasak setelah pesanan masuk — bumbu digerus pada hari yang sama.
             </p>
             <div className="mt-5 flex gap-2.5">
               <a
@@ -66,8 +70,13 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="mt-10 border-t border-goldsoft/20 pt-5 text-[0.78rem] text-honey/60">
-          © {tahun} {site.brand} · {site.city} · {site.kirimRingkas}
+        <div className="mt-10 flex flex-col gap-2 border-t border-goldsoft/20 pt-5 text-[0.78rem] text-honey/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {tahun} {site.brand} · {site.city} · {site.kirimRingkas}
+          </p>
+          <p className="text-honey/70">
+            Om Swastyastu — salam hangat dari dapur kami.
+          </p>
         </div>
       </Shell>
     </footer>

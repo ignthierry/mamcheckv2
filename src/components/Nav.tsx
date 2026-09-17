@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "./Art";
+import { PolengTrim } from "./Bali";
 
 const nav = [
   { href: "#menu", label: "Menu" },
@@ -76,6 +77,8 @@ export default function Nav() {
           Chat admin
         </a>
       </div>
+
+      <PolengTrim id="poleng-nav" />
     </header>
   );
 }

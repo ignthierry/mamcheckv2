@@ -1,12 +1,14 @@
 import { faq, site, waLink } from "@/lib/site";
 import { ChevronIcon, WhatsAppIcon } from "./Art";
+import { CeplokField } from "./Bali";
 import { SectionHead, Shell } from "./Section";
 
 export default function Faq() {
   return (
-    <section id="tanya" className="relative bg-sand/40">
-      <Shell className="py-14 sm:py-20">
-        <SectionHead eyebrow="Tanya" title="Yang paling sering ditanya." />
+    <section id="tanya" className="relative overflow-hidden bg-sand/40">
+      <CeplokField id="ceplok-tanya" className="text-forest/[0.05]" />
+      <Shell className="relative py-14 sm:py-20">
+        <SectionHead eyebrow="Tanya" title="Pertanyaan yang sering diajukan." />
 
         <div className="mt-8 max-w-3xl divide-y divide-gold/25 border-y border-gold/25">
           {faq.map((f, i) => (
@@ -36,7 +38,7 @@ export default function Faq() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-semibold text-forest underline decoration-gold/60 decoration-2 underline-offset-4 hover:text-gold"
           >
-            tanya admin
+            hubungi admin
             <WhatsAppIcon className="h-3.5 w-3.5" />
           </a>
         </p>

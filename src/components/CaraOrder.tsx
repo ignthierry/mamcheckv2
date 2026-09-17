@@ -9,8 +9,8 @@ export default function CaraOrder() {
         <SectionHead
           tone="light"
           eyebrow="Cara pesan"
-          title="Tiga langkah, semuanya lewat WhatsApp."
-          lead="Tanpa akun, tanpa keranjang belanja — tanya dulu soal porsi atau level pedas juga boleh."
+          title="Tiga langkah, seluruh proses melalui WhatsApp."
+          lead="Tanpa akun dan tanpa keranjang belanja. Anda juga dapat berkonsultasi lebih dahulu soal porsi maupun tingkat kepedasan."
         />
 
         <ol className="mt-10 grid gap-6 sm:grid-cols-3 sm:gap-8">
@@ -35,8 +35,8 @@ export default function CaraOrder() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-md text-[0.85rem] leading-relaxed text-honey/70">
-            Pesanan acara atau porsi besar: konfirmasi minimal H-1 supaya dapur
-            bisa atur jadwal masak.
+            Pesanan acara atau porsi besar: mohon konfirmasi minimal H-1 agar
+            jadwal masak dan pengiriman dapat disiapkan.
           </p>
           <a
             href={waLink(

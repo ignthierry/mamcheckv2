@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { UkirDivider } from "./Bali";
+
 export function Shell({
   children,
   className = "",
@@ -28,6 +30,10 @@ export function SectionHead({
   const isLight = tone === "light";
   return (
     <div className="max-w-2xl">
+      <UkirDivider
+        small
+        className={`mb-3 ${isLight ? "text-goldsoft/80" : "text-gold/80"}`}
+      />
       <p
         className={`text-[0.7rem] font-semibold tracking-[0.24em] uppercase ${
           isLight ? "text-goldsoft" : "text-gold"

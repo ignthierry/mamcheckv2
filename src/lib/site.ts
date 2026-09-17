@@ -10,7 +10,8 @@ export const site = {
   /** Video hero, taruh file di public/ lalu isi mis. "/hero.mp4". Kosong = hero teks biasa. */
   heroVideo: "/hero.mp4",
   heroVideoPoster: "/hero-poster.webp",
-  tagline: "Masakan Bali rumahan — made by order",
+  tagline:
+    "Masakan Bali rumahan — bumbu digerus harian, dimasak sesuai pesanan",
   city: "Gempol, Pasuruan",
   whatsapp: "6282142312999", // nomor WA admin format 62xxx (tanpa + / 0 / spasi)
   whatsappDisplay: "+62 821-4231-2999", // tampilan nomor untuk pelanggan
@@ -49,7 +50,7 @@ export const menu: Disain[] = [
     id: "ayam-betutu",
     nama: "Ayam Betutu",
     deskripsi:
-      "Ayam berbumbu base genep, dikukus lalu dipanggang dalam balutan daun pisang.",
+      "Ayam berbumbu base genep khas Bali, dikukus perlahan lalu dipanggang dalam balutan daun pisang.",
     opsi: ["Original (gurih)", "Pedas khas Bali"],
     label: "Paling dicari",
     art: "betutu",
@@ -61,7 +62,7 @@ export const menu: Disain[] = [
     id: "sate-manis-ayam",
     nama: "Sate Manis Ayam",
     deskripsi:
-      "Paha ayam dimarinasi bumbu, dipanggang arang, disajikan dengan sambal kecap & limau.",
+      "Paha ayam dimarinasi bumbu Bali, dibakar di atas arang, disajikan dengan sambal kecap dan limau.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "sate",
     foto: "/menu/sate-manis-ayam.webp",
@@ -72,7 +73,7 @@ export const menu: Disain[] = [
     id: "sate-lilit",
     nama: "Sate Lilit",
     deskripsi:
-      "Daging bumbu kelapa dililitkan pada batang serai, dibakar sampai wangi.",
+      "Daging berbumbu kelapa dililitkan pada batang bambu, dibakar hingga harum.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "lilit",
     foto: "/menu/sate-lilit.webp",
@@ -83,7 +84,7 @@ export const menu: Disain[] = [
     id: "tim-ayam",
     nama: "Tum Ayam",
     deskripsi:
-      "Ayam cincang berbumbu rempah, santan, dan telur, dibungkus daun pisang lalu dikukus.",
+      "Ayam cincang berbumbu rempah, santan, dan telur; dibungkus daun pisang lalu dikukus.",
     opsi: ["Paha bawah", "Dada"],
     label: "Ringan & hangat",
     art: "tim",
@@ -95,7 +96,7 @@ export const menu: Disain[] = [
     id: "soup-iga",
     nama: "Soup Iga",
     deskripsi:
-      "Iga sapi direbus lambat berjam-jam sampai daging lepas dari tulang.",
+      "Iga sapi direbus lambat dalam kaldu rempah hingga empuk dan mudah lepas dari tulang.",
     opsi: ["Porsi reguler", "Porsi jumbo"],
     art: "soup",
     foto: "/menu/soup-iga.webp",
@@ -106,7 +107,7 @@ export const menu: Disain[] = [
     id: "kacang-bali",
     nama: "Kacang Bali",
     deskripsi:
-      "Kacang tanah sangrai bumbu Bali: gurih, pedas, sedikit manis. Tahan lama.",
+      "Kacang tanah sangrai berbumbu Bali — gurih, pedas lembut, sedikit manis, dan tahan lama.",
     opsi: ["200 gram", "500 gram", "1 kg"],
     label: "Bisa kirim luar kota",
     hargaViaAdmin: true,
@@ -118,19 +119,19 @@ export const menu: Disain[] = [
 export const layanan = [
   {
     judul: "Catering harian & kantor",
-    isi: "Menu Bali diporsi per tray atau per orang untuk makan siang tim, arisan, dan rapat. Mulai 10 porsi, konfirmasi H-1.",
+    isi: "Menu Bali dalam porsi tray atau per orang untuk makan siang tim, arisan, dan rapat kantor. Mulai 10 porsi, konfirmasi H-1.",
     cta: "Halo MamCheck, mau tanya catering untuk … porsi, tanggal …",
     label: "Mulai 10 porsi",
   },
   {
     judul: "Nasi kotak",
-    isi: "Nasi kotak siap antar untuk rapat, syukuran, atau dibagikan ke warga. Pilih lauk: betutu, sate, tum ayam, atau soup iga.",
+    isi: "Nasi kotak siap antar untuk rapat, syukuran, dan pembagian ke warga. Lauk dapat dipilih: betutu, sate, tum ayam, atau soup iga.",
     cta: "Halo MamCheck, mau pesan nasi kotak … kotak untuk tanggal …",
     label: "Bisa pilih lauk",
   },
   {
     judul: "Hajatan & acara keluarga",
-    isi: "Pesanan porsi besar untuk pernikahan, selamatan, dan hajatan. Dapur masak setelah pesanan masuk, jadwal dibahas dengan admin.",
+    isi: "Pesanan porsi besar untuk pernikahan, selamatan, dan hajatan. Jadwal masak serta pengiriman disusun bersama admin.",
     cta: "Halo MamCheck, ada hajatan tanggal …, mau tanya menu dan estimasi biaya.",
     label: "Diskusi jadwal",
   },
@@ -140,67 +141,67 @@ export const layanan = [
 export const kirim = [
   {
     judul: "Pasuruan & Sidoarjo",
-    isi: "Kurir instan / sameday, radius ±25 km dari dapur.",
+    isi: "Kurir instan/sameday, radius ±25 km dari dapur.",
   },
   {
     judul: "Ambil sendiri",
-    isi: "Gratis, langsung di dapur — Watukosek, Gempol.",
+    isi: "Gratis, langsung di dapur Watukosek, Gempol.",
   },
   {
     judul: "Frozen & Kacang Bali",
-    isi: "Bisa dikirim lebih jauh, atau pakai paket kargo.",
+    isi: "Dapat dikirim lebih jauh melalui paket kargo.",
   },
 ];
 
 export const langkah = [
   {
     no: "01",
-    judul: "Chat admin",
-    isi: "Sebutkan menu, jumlah, tanggal, dan alamat.",
+    judul: "Hubungi admin",
+    isi: "Sampaikan menu, jumlah, tanggal, dan alamat melalui WhatsApp.",
   },
   {
     no: "02",
-    judul: "Admin hitung",
-    isi: "Ongkir, jadwal masak, dan total dibahas di chat.",
+    judul: "Konfirmasi pesanan",
+    isi: "Admin menghitung ongkos kirim, jadwal masak, dan total pesanan.",
   },
   {
     no: "03",
-    judul: "Dapur masak",
-    isi: "Dimasak hari itu juga, lalu dikirim atau diambil.",
+    judul: "Dapur memasak",
+    isi: "Pesanan dimasak pada hari yang disepakati, lalu dikirim atau diambil.",
   },
 ];
 
 export const faq: { q: string; a: string }[] = [
   {
-    q: "Kenapa tidak ada daftar harga?",
-    a: "Harga menyesuaikan ukuran dan jumlah pesanan, termasuk Kacang Bali. Admin hitungkan begitu kamu sebutkan menu dan jumlahnya.",
+    q: "Mengapa tidak ada daftar harga?",
+    a: "Harga menyesuaikan ukuran porsi dan jumlah pesanan, termasuk Kacang Bali. Total akan dihitung admin setelah Anda menyampaikan menu dan jumlahnya.",
   },
   {
-    q: "Bisa dikirim ke luar kota?",
-    a: "Untuk masakan siap santap hanya Pasuruan & Sidoarjo (radius ±25 km). Frozen dan Kacang Bali bisa lebih jauh lewat paket kargo.",
+    q: "Apakah bisa dikirim ke luar kota?",
+    a: "Masakan siap santap hanya untuk Pasuruan & Sidoarjo (radius ±25 km). Frozen dan Kacang Bali dapat dikirim lebih jauh melalui paket kargo.",
   },
   {
-    q: "Berapa lama pesanan dibuat?",
-    a: "Semua dimasak setelah pesanan masuk. Untuk porsi besar atau acara, konfirmasi minimal H-1.",
+    q: "Berapa lama pesanan disiapkan?",
+    a: "Seluruh pesanan dimasak setelah pesanan masuk. Untuk porsi besar atau acara, mohon konfirmasi minimal H-1.",
   },
   {
-    q: "Bisa ambil sendiri di dapur?",
-    a: "Bisa dan gratis. Alamat dapur ada di bagian kontak bawah halaman ini.",
+    q: "Bisakah ambil sendiri di dapur?",
+    a: "Bisa, tanpa biaya tambahan. Alamat dapur tercantum pada bagian kontak di bawah halaman ini.",
   },
   {
-    q: "Ayam Betutu ada level pedasnya?",
-    a: "Ada dua: Original yang gurih dan Pedas khas Bali. Sebutkan saat chat.",
+    q: "Apakah Ayam Betutu punya pilihan level pedas?",
+    a: "Tersedia dua pilihan: Original (gurih) dan Pedas khas Bali. Silakan sampaikan pilihan Anda saat memesan.",
   },
   {
-    q: "Bisa pesan untuk hajatan atau nasi kotak?",
-    a: "Bisa. Sebutkan tanggal, jumlah porsi/kotak, dan lokasi. Untuk porsi besar konfirmasi minimal H-1, dan untuk hajatan sebaiknya lebih awal supaya jadwal dapur bisa disiapkan.",
+    q: "Apakah menerima pesanan hajatan atau nasi kotak?",
+    a: "Ya. Sampaikan tanggal, jumlah porsi atau kotak, dan lokasi. Untuk porsi besar mohon konfirmasi minimal H-1, dan untuk hajatan sebaiknya lebih awal agar jadwal dapur dapat disiapkan.",
   },
   {
-    q: "Ada minimal order untuk catering?",
-    a: "Catering dan nasi kotak mulai 10 porsi. Jumlah lebih besar bisa dibahas menunya dengan admin, termasuk pilihan lauk dan waktu pengiriman.",
+    q: "Apakah ada minimal order untuk catering?",
+    a: "Catering dan nasi kotak mulai 10 porsi. Untuk jumlah lebih besar, susunan menu dan waktu pengiriman dibahas bersama admin.",
   },
   {
-    q: "Bagaimana pembayarannya?",
-    a: "Transfer bank atau e-wallet. Untuk pesanan besar, berlaku DP sebagai tanda pesanan diproses.",
+    q: "Bagaimana cara pembayarannya?",
+    a: "Transfer bank atau e-wallet. Untuk pesanan besar, berlaku uang muka (DP) sebagai tanda pesanan diproses.",
   },
 ];

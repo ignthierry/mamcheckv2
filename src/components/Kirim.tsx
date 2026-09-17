@@ -8,7 +8,7 @@ export default function Kirim() {
       <Shell className="py-14 sm:py-20">
         <SectionHead
           eyebrow="Pengiriman"
-          title="Kirim dekat, ambil sendiri, atau kargo untuk frozen."
+          title="Pengiriman dekat, ambil sendiri, atau kargo untuk frozen."
         />
 
         <dl className="mt-10 divide-y divide-gold/20 border-y border-gold/20">
@@ -29,7 +29,7 @@ export default function Kirim() {
         </dl>
 
         <p className="mt-6 text-[0.85rem] text-moss/75">
-          Ongkos kirim dihitung admin sesuai jarak atau tarif ekspedisi —{" "}
+          Ongkos kirim dihitung sesuai jarak atau tarif ekspedisi —{" "}
           <a
             href={waLink(
               `Halo ${site.brand}, mau tanya ongkir ke alamat saya.`,
@@ -38,7 +38,7 @@ export default function Kirim() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-semibold text-forest underline decoration-gold/60 decoration-2 underline-offset-4 hover:text-gold"
           >
-            cek ongkir
+            cek ongkos kirim
             <WhatsAppIcon className="h-3.5 w-3.5" />
           </a>
         </p>
