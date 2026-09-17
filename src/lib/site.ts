@@ -5,6 +5,8 @@
 
 export const site = {
   brand: "MamCheck",
+  /** Domain produksi — dipakai untuk canonical, sitemap, og:url, JSON-LD. */
+  url: "https://mamcheck.my.id",
   /** Video hero, taruh file di public/ lalu isi mis. "/hero.mp4". Kosong = hero teks biasa. */
   heroVideo: "/hero.mp4",
   heroVideoPoster: "/hero-poster.webp",

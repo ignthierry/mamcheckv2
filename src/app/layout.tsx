@@ -18,6 +18,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  alternates: { canonical: "/" },
   title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
   description:
     "Ayam betutu, sate manis, sate lilit, tum ayam, soup iga, dan Kacang Bali. Semua dimasak setelah pesanan masuk. Pesan langsung via WhatsApp.",
@@ -31,12 +33,19 @@ export const metadata: Metadata = {
     site.city,
   ],
   openGraph: {
+    url: site.url,
     title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
     description:
       "Dapur rumahan masakan Bali. Made by order, bumbu segar, siap santap untuk area lokal, Kacang Bali bisa kirim antar kota.",
     type: "website",
     locale: "id_ID",
     siteName: site.brand,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
+    description:
+      "Dapur rumahan masakan Bali. Made by order, bumbu segar, siap santap untuk area lokal, Kacang Bali bisa kirim antar kota.",
   },
   robots: { index: true, follow: true },
 };
@@ -45,14 +54,24 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   name: site.brand,
+  url: site.url,
+  image: [`${site.url}/logo/mamcheck-lockup.png`, `${site.url}/menu/ayam-betutu.webp`],
+  logo: `${site.url}/logo/mamcheck-avatar.png`,
   description:
     "Dapur rumahan masakan Bali. Made by order: ayam betutu, sate manis ayam, sate lilit, tum ayam, soup iga, dan Kacang Bali.",
   servesCuisine: ["Balinese", "Indonesian"],
-  address: { "@type": "PostalAddress", streetAddress: site.alamat, addressCountry: "ID" },
+  priceRange: "Rp",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.alamat,
+    addressLocality: "Gempol",
+    addressRegion: "Jawa Timur",
+    addressCountry: "ID",
+  },
   areaServed: ["Pasuruan", "Sidoarjo"],
   openingHours: site.jam,
   telephone: `+${site.whatsapp}`,
-  hasMenu: "#menu",
+  hasMenu: `${site.url}/#menu`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
