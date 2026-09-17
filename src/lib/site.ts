@@ -7,7 +7,7 @@ export const site = {
   brand: "MamCheck",
   /** Video hero, taruh file di public/ lalu isi mis. "/hero.mp4". Kosong = hero teks biasa. */
   heroVideo: "/hero.mp4",
-  heroVideoPoster: "/menu/sate-manis-ayam.webp",
+  heroVideoPoster: "/hero-poster.webp",
   tagline: "Masakan Bali rumahan — made by order",
   city: "Gempol, Pasuruan",
   whatsapp: "6282142312999", // nomor WA admin format 62xxx (tanpa + / 0 / spasi)
