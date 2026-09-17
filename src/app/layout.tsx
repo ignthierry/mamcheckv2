@@ -20,7 +20,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
   description:
-    "Ayam betutu, sate manis, sate lilit, tim ayam, soup iga, dan Kacang Bali. Semua dimasak setelah pesanan masuk. Pesan langsung via WhatsApp.",
+    "Ayam betutu, sate manis, sate lilit, tum ayam, soup iga, dan Kacang Bali. Semua dimasak setelah pesanan masuk. Pesan langsung via WhatsApp.",
   keywords: [
     "masakan Bali",
     "ayam betutu",
@@ -46,7 +46,7 @@ const jsonLd = {
   "@type": "Restaurant",
   name: site.brand,
   description:
-    "Dapur rumahan masakan Bali. Made by order: ayam betutu, sate manis ayam, sate lilit, tim ayam, soup iga, dan Kacang Bali.",
+    "Dapur rumahan masakan Bali. Made by order: ayam betutu, sate manis ayam, sate lilit, tum ayam, soup iga, dan Kacang Bali.",
   servesCuisine: ["Balinese", "Indonesian"],
   address: { "@type": "PostalAddress", streetAddress: site.alamat, addressCountry: "ID" },
   areaServed: ["Pasuruan", "Sidoarjo"],

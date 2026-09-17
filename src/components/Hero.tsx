@@ -85,7 +85,7 @@ export default function Hero() {
             Masakan Bali rumahan, dimasak setelah kamu pesan.
           </h1>
           <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-honey/95 [text-shadow:0_2px_12px_rgba(7,33,26,0.8)]">
-            Ayam betutu, sate lilit, tim ayam, sampai soup iga — diolah dadakan di dapur{" "}
+            Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan di dapur{" "}
             {site.city} dan dikirim hari itu juga.
           </p>
           <Aksi terang />
@@ -110,7 +110,7 @@ export default function Hero() {
           Masakan Bali rumahan, dimasak setelah kamu pesan.
         </h1>
         <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-moss/90">
-          Ayam betutu, sate lilit, tim ayam, sampai soup iga — diolah dadakan di dapur {site.city}{" "}
+          Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan di dapur {site.city}{" "}
           dan dikirim hari itu juga.
         </p>
         <Aksi terang={false} />

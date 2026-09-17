@@ -73,11 +73,14 @@ export const menu: Disain[] = [
   },
   {
     id: "tim-ayam",
-    nama: "Tim Ayam",
-    deskripsi: "Ayam dikukus dengan jahe dan limau — kuah bening, ringan, cocok saat kurang enak badan.",
+    nama: "Tum Ayam",
+    deskripsi: "Ayam cincang berbumbu rempah, santan, dan telur, dibungkus daun pisang lalu dikukus.",
     opsi: ["Paha bawah", "Dada"],
     label: "Ringan & hangat",
     art: "tim",
+    foto: "/menu/tum-ayam.webp",
+    fotoAlt:
+      "Tum ayam Bali — ayam cincang berbumbu dibungkus daun pisang, disajikan dengan irisan cabai dan daun jeruk di atas talenan kayu",
   },
   {
     id: "soup-iga",
