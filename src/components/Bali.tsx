@@ -62,7 +62,7 @@ export function UkirDivider({
     <svg
       aria-hidden="true"
       viewBox="0 0 240 28"
-      className={`block ${small ? "h-[14px] w-[120px]" : "h-[20px] w-[220px] sm:h-[24px] sm:w-[260px]"} ${className}`}
+      className={`ukir-draw block ${small ? "h-[14px] w-[120px]" : "h-[20px] w-[220px] sm:h-[24px] sm:w-[260px]"} ${className}`}
       fill="none"
     >
       <g
@@ -73,16 +73,26 @@ export function UkirDivider({
       >
         {!small && (
           <>
-            <path d="M0 14h58" strokeWidth="1" opacity="0.28" />
-            <path d="M182 14h58" strokeWidth="1" opacity="0.28" />
+            <path pathLength={1} d="M0 14h58" strokeWidth="1" opacity="0.28" />
+            <path
+              pathLength={1}
+              d="M182 14h58"
+              strokeWidth="1"
+              opacity="0.28"
+            />
           </>
         )}
-        <path d={PILIN} />
-        <path d={PILIN} transform="translate(240 0) scale(-1 1)" />
+        <path pathLength={1} d={PILIN} />
+        <path
+          pathLength={1}
+          d={PILIN}
+          transform="translate(240 0) scale(-1 1)"
+        />
         <circle
           cx="74"
           cy="14"
           r="1.6"
+          pathLength={1}
           fill="currentColor"
           stroke="none"
           opacity="0.5"
@@ -91,13 +101,19 @@ export function UkirDivider({
           cx="166"
           cy="14"
           r="1.6"
+          pathLength={1}
           fill="currentColor"
           stroke="none"
           opacity="0.5"
         />
       </g>
-      <path d="M120 3.6l6.4 10.4-6.4 10.4-6.4-10.4z" fill="currentColor" />
       <path
+        className="ukir-fill"
+        d="M120 3.6l6.4 10.4-6.4 10.4-6.4-10.4z"
+        fill="currentColor"
+      />
+      <path
+        className="ukir-fill"
         d="M120 9.2l2.9 4.8-2.9 4.8-2.9-4.8z"
         fill="#fcf7ec"
         opacity="0.92"
@@ -168,7 +184,16 @@ export function CeplokField({
           <circle cx="28" cy="28" r="2.4" fill="currentColor" />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill={`url(#${id})`} />
+      {/* bidang dilebihkan lalu digeser: motif bergerak mulus tanpa celah */}
+      <g className="ceplok-drift">
+        <rect
+          x="-25%"
+          y="-25%"
+          width="150%"
+          height="150%"
+          fill={`url(#${id})`}
+        />
+      </g>
     </svg>
   );
 }

@@ -14,14 +14,14 @@ export default function Faq() {
           {faq.map((f, i) => (
             <details
               key={f.q}
-              className="group py-4"
+              className="reveal group py-4"
               style={{ transitionDelay: `${i * 40}ms` }}
             >
               <summary className="flex cursor-pointer list-none items-start justify-between gap-5">
                 <h3 className="font-display text-[1.05rem] leading-snug text-forest">
                   {f.q}
                 </h3>
-                <ChevronIcon className="mt-1 h-5 w-5 shrink-0 text-gold transition-transform duration-300 group-open:rotate-180" />
+                <ChevronIcon className="mt-1 h-5 w-5 shrink-0 text-gold transition-transform duration-300 group-open:rotate-180 group-hover:translate-y-0.5" />
               </summary>
               <p className="mt-2.5 text-[0.9rem] leading-relaxed text-moss/85">
                 {f.a}

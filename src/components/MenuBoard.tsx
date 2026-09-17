@@ -21,7 +21,7 @@ export default function MenuBoard() {
               <article
                 key={m.id}
                 style={{ transitionDelay: `${i * 60}ms` }}
-                className="reveal group flex flex-col rounded-2xl bg-sand/50 p-4"
+                className="reveal lift group flex flex-col rounded-2xl bg-sand/50 p-4"
               >
                 <div className="relative aspect-[2/1] overflow-hidden rounded-xl bg-cream">
                   {m.foto ? (
@@ -31,7 +31,7 @@ export default function MenuBoard() {
                       width={1600}
                       height={800}
                       sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover object-center transition-transform duration-[900ms] ease-out group-hover:scale-[1.07]"
                     />
                   ) : Art ? (
                     <div className="flex h-full w-full items-center justify-center">
@@ -39,7 +39,7 @@ export default function MenuBoard() {
                     </div>
                   ) : null}
                   {m.label ? (
-                    <span className="absolute top-2.5 left-2.5 rounded-full bg-forest/95 px-2.5 py-1 text-[0.58rem] font-semibold tracking-[0.1em] text-honey uppercase">
+                    <span className="pop-badge absolute top-2.5 left-2.5 rounded-full bg-forest/95 px-2.5 py-1 text-[0.58rem] font-semibold tracking-[0.1em] text-honey uppercase">
                       {m.label}
                     </span>
                   ) : null}

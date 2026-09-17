@@ -12,6 +12,25 @@ const fakta = [
 
 const pesanAwal = (isi: string) => waLink(isi);
 
+/** H1 dipecah per kata supaya muncul berurutan (animasi `word`). */
+function JudulBerurut({ children }: { children: string }) {
+  const kata = children.split(" ");
+  return (
+    <>
+      {kata.map((k, i) => (
+        <span
+          key={`${k}-${i}`}
+          className="word"
+          style={{ "--i": i } as React.CSSProperties}
+        >
+          {k}
+          {i < kata.length - 1 ? "\u00a0" : ""}
+        </span>
+      ))}
+    </>
+  );
+}
+
 /** CTA + fakta singkat — dipakai versi terang maupun versi di atas video. */
 function Aksi({ terang }: { terang: boolean }) {
   return (
@@ -23,7 +42,7 @@ function Aksi({ terang }: { terang: boolean }) {
           )}
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold shadow-warm transition-colors ${
+          className={`btn-push inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold shadow-warm ${
             terang
               ? "bg-gold text-ink hover:bg-goldsoft"
               : "bg-forest text-cream hover:bg-moss"
@@ -34,7 +53,7 @@ function Aksi({ terang }: { terang: boolean }) {
         </a>
         <a
           href="#menu"
-          className={`inline-flex items-center rounded-full border px-6 py-3.5 text-[0.95rem] font-semibold transition-colors ${
+          className={`btn-push inline-flex items-center rounded-full border px-6 py-3.5 text-[0.95rem] font-semibold ${
             terang
               ? "border-cream/45 text-cream hover:border-goldsoft hover:text-goldsoft"
               : "border-forest/25 text-forest hover:border-gold hover:text-gold"
@@ -91,23 +110,44 @@ export default function Hero() {
         />
 
         <Shell className="relative flex min-h-[34rem] flex-col justify-end py-16 sm:min-h-[38rem] sm:py-20 lg:min-h-[42rem] lg:justify-center">
-          <p className="text-[0.72rem] font-semibold tracking-[0.24em] text-goldsoft uppercase [text-shadow:0_2px_10px_rgba(7,33,26,0.75)]">
+          <p className="rise text-[0.72rem] font-semibold tracking-[0.24em] text-goldsoft uppercase [text-shadow:0_2px_10px_rgba(7,33,26,0.75)]">
             {site.city} · dapur Bali rumahan
           </p>
           <h1 className="mt-4 max-w-3xl font-display text-[2.2rem] leading-[1.06] tracking-tight text-cream [text-shadow:0_3px_18px_rgba(7,33,26,0.7)] sm:text-5xl lg:text-[3.5rem]">
-            Cita rasa Bali, dimasak segar setelah pesanan Anda masuk.
+            <JudulBerurut>
+              Cita rasa Bali, dimasak segar setelah pesanan Anda masuk.
+            </JudulBerurut>
           </h1>
-          <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-honey/95 [text-shadow:0_2px_12px_rgba(7,33,26,0.8)]">
+          <p
+            className="rise mt-5 max-w-xl text-[1.02rem] leading-relaxed text-honey/95 [text-shadow:0_2px_12px_rgba(7,33,26,0.8)]"
+            style={{ animationDelay: "620ms" }}
+          >
             Ayam betutu berbumbu base genep, sate lilit batang bambu, tum ayam,
             hingga soup iga — bumbu digerus harian di dapur {site.city}, lalu
             diantar dalam kondisi hangat.
           </p>
-          <Aksi terang />
+          <div className="rise" style={{ animationDelay: "760ms" }}>
+            <Aksi terang />
+          </div>
+
+          <span
+            aria-hidden="true"
+            className="cue-bob pointer-events-none absolute bottom-10 left-1/2 hidden -translate-x-1/2 text-goldsoft/70 sm:block"
+          >
+            <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
+              <path
+                d="M6 9l6 6 6-6"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
         </Shell>
 
         <PolengTrim
           id="poleng-hero"
-          className="absolute inset-x-0 bottom-0 z-10"
+          className="poleng-grow absolute inset-x-0 bottom-0 z-10"
         />
       </section>
     );
@@ -125,23 +165,30 @@ export default function Hero() {
       />
 
       <Shell className="relative flex min-h-[26rem] flex-col justify-center py-16 sm:min-h-[30rem] sm:py-20 lg:min-h-[32rem]">
-        <p className="text-[0.72rem] font-semibold tracking-[0.24em] text-gold uppercase">
+        <p className="rise text-[0.72rem] font-semibold tracking-[0.24em] text-gold uppercase">
           {site.city} · dapur Bali rumahan
         </p>
         <h1 className="mt-4 max-w-3xl font-display text-[2.2rem] leading-[1.06] tracking-tight text-forest sm:text-5xl lg:text-[3.5rem]">
-          Cita rasa Bali, dimasak segar setelah pesanan Anda masuk.
+          <JudulBerurut>
+            Cita rasa Bali, dimasak segar setelah pesanan Anda masuk.
+          </JudulBerurut>
         </h1>
-        <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-moss/90">
+        <p
+          className="rise mt-5 max-w-xl text-[1.02rem] leading-relaxed text-moss/90"
+          style={{ animationDelay: "620ms" }}
+        >
           Ayam betutu berbumbu base genep, sate lilit batang bambu, tum ayam,
           hingga soup iga — bumbu digerus harian di dapur {site.city}, lalu
           diantar dalam kondisi hangat.
         </p>
-        <Aksi terang={false} />
+        <div className="rise" style={{ animationDelay: "760ms" }}>
+          <Aksi terang={false} />
+        </div>
       </Shell>
 
       <PolengTrim
         id="poleng-hero-teks"
-        className="absolute inset-x-0 bottom-0"
+        className="poleng-grow absolute inset-x-0 bottom-0"
       />
     </section>
   );

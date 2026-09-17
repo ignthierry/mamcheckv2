@@ -17,10 +17,10 @@ export default function CaraOrder() {
           {langkah.map((l, i) => (
             <li
               key={l.no}
-              style={{ transitionDelay: `${i * 60}ms` }}
+              style={{ transitionDelay: `${i * 140}ms` }}
               className="reveal"
             >
-              <span className="font-display text-[1.6rem] text-goldsoft">
+              <span className="pop-badge block font-display text-[1.6rem] text-goldsoft">
                 {l.no}
               </span>
               <h3 className="mt-2 font-display text-[1.15rem] text-cream">
@@ -44,7 +44,7 @@ export default function CaraOrder() {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-gold px-6 py-3.5 text-[0.92rem] font-semibold text-ink transition-colors hover:bg-goldsoft"
+            className="btn-push inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-gold px-6 py-3.5 text-[0.92rem] font-semibold text-ink hover:bg-goldsoft"
           >
             <WhatsAppIcon className="h-5 w-5" />
             Buka WhatsApp

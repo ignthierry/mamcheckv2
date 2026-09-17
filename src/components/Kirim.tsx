@@ -16,7 +16,7 @@ export default function Kirim() {
             <div
               key={k.judul}
               style={{ transitionDelay: `${i * 60}ms` }}
-              className="reveal flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-6"
+              className="reveal-left flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-6"
             >
               <dt className="w-full font-display text-[1.2rem] text-forest sm:w-64 sm:shrink-0">
                 {k.judul}

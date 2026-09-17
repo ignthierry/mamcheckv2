@@ -29,7 +29,7 @@ export function SectionHead({
 }) {
   const isLight = tone === "light";
   return (
-    <div className="max-w-2xl">
+    <div className="reveal max-w-2xl">
       <UkirDivider
         small
         className={`mb-3 ${isLight ? "text-goldsoft/80" : "text-gold/80"}`}
@@ -48,6 +48,7 @@ export function SectionHead({
       >
         {title}
       </h2>
+      <span className="sweep-line" aria-hidden="true" />
       {lead ? (
         <p
           className={`mt-3 text-[0.95rem] leading-relaxed ${

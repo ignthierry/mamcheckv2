@@ -59,7 +59,7 @@ export default function Lokasi() {
 
         <div className="mt-10 grid gap-5 lg:grid-cols-[1.45fr_1fr]">
           {/* Peta */}
-          <div className="reveal relative overflow-hidden rounded-2xl border border-gold/30 bg-sand/50 shadow-warm">
+          <div className="reveal-blur map-frame relative overflow-hidden rounded-2xl border border-gold/30 bg-sand/50 shadow-warm">
             <iframe
               src={site.mapsEmbed}
               title={`Peta lokasi ${site.brand} — ${site.alamat}`}
@@ -78,8 +78,8 @@ export default function Lokasi() {
           </div>
 
           {/* Alamat & aksi */}
-          <div className="reveal relative flex flex-col overflow-hidden rounded-2xl bg-forest p-6 text-cream sm:p-7">
-            <Kamboja className="pointer-events-none absolute -top-4 -right-5 h-28 w-28 text-goldsoft/10" />
+          <div className="reveal-right relative flex flex-col overflow-hidden rounded-2xl bg-forest p-6 text-cream sm:p-7">
+            <Kamboja className="float-soft pointer-events-none absolute -top-4 -right-5 h-28 w-28 text-goldsoft/10" />
 
             <div className="relative">
               <span className="inline-flex items-center gap-2 text-[0.7rem] font-semibold tracking-[0.24em] text-goldsoft uppercase">
@@ -113,7 +113,7 @@ export default function Lokasi() {
                 href={waRute}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gold px-5 py-3 text-[0.9rem] font-semibold text-ink transition-colors hover:bg-goldsoft"
+                className="btn-push inline-flex items-center justify-center gap-2.5 rounded-full bg-gold px-5 py-3 text-[0.9rem] font-semibold text-ink hover:bg-goldsoft"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 Minta rute via WhatsApp
@@ -122,7 +122,7 @@ export default function Lokasi() {
                 href={site.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-goldsoft/50 px-5 py-3 text-[0.9rem] font-semibold text-honey transition-colors hover:border-goldsoft hover:bg-moss/60 hover:text-cream"
+                className="btn-push inline-flex items-center justify-center gap-2 rounded-full border border-goldsoft/50 px-5 py-3 text-[0.9rem] font-semibold text-honey hover:border-goldsoft hover:bg-moss/60 hover:text-cream"
               >
                 Buka di Google Maps
                 <ArrowOutIcon className="h-4 w-4" />

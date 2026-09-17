@@ -74,7 +74,7 @@ export default function Nav() {
           )}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2.5 text-[0.82rem] font-semibold text-cream transition-colors hover:bg-moss sm:px-5"
+          className="btn-push inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2.5 text-[0.82rem] font-semibold text-cream hover:bg-moss sm:px-5"
         >
           <WhatsAppIcon className="h-4 w-4" />
           Chat admin

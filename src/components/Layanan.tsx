@@ -7,7 +7,7 @@ export default function Layanan() {
   return (
     <section id="catering" className="relative overflow-hidden">
       <CeplokField id="ceplok-layanan" className="text-forest/[0.055]" />
-      <Kamboja className="pointer-events-none absolute top-12 right-4 h-20 w-20 text-gold/15 sm:h-28 sm:w-28" />
+      <Kamboja className="float-soft pointer-events-none absolute top-12 right-4 h-20 w-20 text-gold/15 sm:h-28 sm:w-28" />
 
       <Shell className="relative py-14 sm:py-20">
         <SectionHead
@@ -21,9 +21,9 @@ export default function Layanan() {
             <article
               key={l.judul}
               style={{ transitionDelay: `${i * 60}ms` }}
-              className="reveal flex flex-col rounded-2xl border border-gold/25 bg-sand/50 p-5"
+              className="reveal-scale lift flex flex-col rounded-2xl border border-gold/25 bg-sand/50 p-5"
             >
-              <span className="w-fit rounded-full bg-forest/95 px-2.5 py-1 text-[0.58rem] font-semibold tracking-[0.1em] text-honey uppercase">
+              <span className="pop-badge w-fit rounded-full bg-forest/95 px-2.5 py-1 text-[0.58rem] font-semibold tracking-[0.1em] text-honey uppercase">
                 {l.label}
               </span>
               <h3 className="mt-4 font-display text-[1.25rem] leading-snug text-forest">

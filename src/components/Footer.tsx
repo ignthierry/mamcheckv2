@@ -8,8 +8,11 @@ export default function Footer() {
   const tahun = new Date().getFullYear();
   return (
     <footer className="relative overflow-hidden bg-forest text-cream">
-      <PolengTrim id="poleng-footer" className="absolute inset-x-0 top-0" />
-      <Kamboja className="pointer-events-none absolute -right-6 -bottom-8 h-48 w-48 text-goldsoft/10" />
+      <PolengTrim
+        id="poleng-footer"
+        className="poleng-shine absolute inset-x-0 top-0"
+      />
+      <Kamboja className="float-soft pointer-events-none absolute -right-6 -bottom-8 h-48 w-48 text-goldsoft/10" />
 
       <Shell className="relative py-12 pt-14">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
@@ -26,7 +29,7 @@ export default function Footer() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-[0.85rem] font-semibold text-ink transition-colors hover:bg-goldsoft"
+                className="btn-push inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-[0.85rem] font-semibold text-ink hover:bg-goldsoft"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 Chat admin
@@ -36,7 +39,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram MamCheck"
-                className="grid h-10 w-10 place-items-center rounded-full border border-goldsoft/40 text-honey transition-colors hover:bg-moss"
+                className="btn-push grid h-10 w-10 place-items-center rounded-full border border-goldsoft/40 text-honey hover:bg-moss"
               >
                 <InstagramIcon className="h-5 w-5" />
               </a>
