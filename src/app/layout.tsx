@@ -79,6 +79,12 @@ const jsonLd = {
   openingHours: site.jam,
   telephone: `+${site.whatsapp}`,
   hasMenu: `${site.url}/#menu`,
+  hasMap: site.mapsUrl,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: site.mapsLat,
+    longitude: site.mapsLng,
+  },
   makesOffer: [
     { "@type": "Offer", name: "Catering harian & kantor" },
     { "@type": "Offer", name: "Nasi kotak" },

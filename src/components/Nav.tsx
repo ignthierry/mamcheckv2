@@ -8,6 +8,7 @@ const nav = [
   { href: "#catering", label: "Catering" },
   { href: "#cara-pesan", label: "Cara pesan" },
   { href: "#pengiriman", label: "Pengiriman" },
+  { href: "#lokasi", label: "Lokasi" },
   { href: "#tanya", label: "Tanya" },
 ];
 

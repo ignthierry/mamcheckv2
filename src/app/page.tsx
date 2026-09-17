@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Kirim from "@/components/Kirim";
 import Layanan from "@/components/Layanan";
+import Lokasi from "@/components/Lokasi";
 import MenuBoard from "@/components/MenuBoard";
 import RevealTrigger from "@/components/RevealTrigger";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Layanan />
         <CaraOrder />
         <Kirim />
+        <Lokasi />
         <Faq />
       </main>
       <Footer />

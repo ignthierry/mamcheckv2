@@ -20,6 +20,12 @@ export const site = {
   alamat:
     "Jl. Lapangan Tembak, Dsn. Ngelawang, Watukosek No. 36, RT 003/RW 001, Gempol, Pasuruan",
   mapsQuery: "Jl. Lapangan Tembak, Watukosek, Gempol, Pasuruan",
+  /** titik dapur di Google Maps (dari tautan yang dibagikan pemilik) */
+  mapsUrl: "https://maps.app.goo.gl/rM6RhF7RbKDLNGiSA",
+  mapsLat: -7.5701924,
+  mapsLng: 112.6695585,
+  mapsEmbed:
+    "https://www.google.com/maps?q=-7.5701924,112.6695585&z=16&hl=id&output=embed",
   /** ringkasan pengiriman — dipakai di blok pengiriman & footer */
   kirimRingkas: "Pasuruan & Sidoarjo · radius ±25 km",
 };
