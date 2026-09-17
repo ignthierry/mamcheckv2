@@ -50,6 +50,9 @@ export const menu: Disain[] = [
     opsi: ["Original (gurih)", "Pedas khas Bali"],
     label: "Paling dicari",
     art: "betutu",
+    foto: "/menu/ayam-betutu.webp",
+    fotoAlt:
+      "Ayam betutu Bali berbumbu kuning di atas daun pisang, lengkap dengan cah kangkung, kacang goreng, dan sambal matah",
   },
   {
     id: "sate-manis-ayam",
