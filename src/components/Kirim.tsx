@@ -21,7 +21,9 @@ export default function Kirim() {
               <dt className="w-full font-display text-[1.2rem] text-forest sm:w-64 sm:shrink-0">
                 {k.judul}
               </dt>
-              <dd className="text-[0.92rem] leading-relaxed text-moss/85">{k.isi}</dd>
+              <dd className="text-[0.92rem] leading-relaxed text-moss/85">
+                {k.isi}
+              </dd>
             </div>
           ))}
         </dl>
@@ -29,7 +31,9 @@ export default function Kirim() {
         <p className="mt-6 text-[0.85rem] text-moss/75">
           Ongkos kirim dihitung admin sesuai jarak atau tarif ekspedisi —{" "}
           <a
-            href={waLink(`Halo ${site.brand}, mau tanya ongkir ke alamat saya.`)}
+            href={waLink(
+              `Halo ${site.brand}, mau tanya ongkir ke alamat saya.`,
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-semibold text-forest underline decoration-gold/60 decoration-2 underline-offset-4 hover:text-gold"

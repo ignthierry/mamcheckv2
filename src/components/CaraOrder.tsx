@@ -15,18 +15,28 @@ export default function CaraOrder() {
 
         <ol className="mt-10 grid gap-6 sm:grid-cols-3 sm:gap-8">
           {langkah.map((l, i) => (
-            <li key={l.no} style={{ transitionDelay: `${i * 60}ms` }} className="reveal">
-              <span className="font-display text-[1.6rem] text-goldsoft">{l.no}</span>
-              <h3 className="mt-2 font-display text-[1.15rem] text-cream">{l.judul}</h3>
-              <p className="mt-1.5 text-[0.88rem] leading-relaxed text-honey/80">{l.isi}</p>
+            <li
+              key={l.no}
+              style={{ transitionDelay: `${i * 60}ms` }}
+              className="reveal"
+            >
+              <span className="font-display text-[1.6rem] text-goldsoft">
+                {l.no}
+              </span>
+              <h3 className="mt-2 font-display text-[1.15rem] text-cream">
+                {l.judul}
+              </h3>
+              <p className="mt-1.5 text-[0.88rem] leading-relaxed text-honey/80">
+                {l.isi}
+              </p>
             </li>
           ))}
         </ol>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-md text-[0.85rem] leading-relaxed text-honey/70">
-            Pesanan acara atau porsi besar: konfirmasi minimal H-1 supaya dapur bisa atur jadwal
-            masak.
+            Pesanan acara atau porsi besar: konfirmasi minimal H-1 supaya dapur
+            bisa atur jadwal masak.
           </p>
           <a
             href={waLink(

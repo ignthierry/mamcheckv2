@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
   description:
-    "Ayam betutu, sate manis, sate lilit, tum ayam, soup iga, dan Kacang Bali. Semua dimasak setelah pesanan masuk. Pesan langsung via WhatsApp.",
+    "Ayam betutu, sate manis, sate lilit, tum ayam, soup iga, dan Kacang Bali. Semua dimasak setelah pesanan masuk. Terima catering, nasi kotak, dan hajatan. Pesan langsung via WhatsApp.",
   keywords: [
     "masakan Bali",
     "ayam betutu",
@@ -30,13 +30,17 @@ export const metadata: Metadata = {
     "kacang Bali",
     "soup iga",
     "catering rumahan",
+    "catering Pasuruan",
+    "catering Sidoarjo",
+    "nasi kotak Gempol",
+    "hajatan Pasuruan",
     site.city,
   ],
   openGraph: {
     url: site.url,
     title: `${site.brand} — Masakan Bali Rumahan, Made by Order`,
     description:
-      "Dapur rumahan masakan Bali. Made by order, bumbu segar, siap santap untuk area lokal, Kacang Bali bisa kirim antar kota.",
+      "Dapur rumahan masakan Bali. Made by order, bumbu segar, siap santap untuk area lokal. Terima catering, nasi kotak, dan hajatan.",
     type: "website",
     locale: "id_ID",
     siteName: site.brand,
@@ -55,7 +59,10 @@ const jsonLd = {
   "@type": "Restaurant",
   name: site.brand,
   url: site.url,
-  image: [`${site.url}/logo/mamcheck-lockup.png`, `${site.url}/menu/ayam-betutu.webp`],
+  image: [
+    `${site.url}/logo/mamcheck-lockup.png`,
+    `${site.url}/menu/ayam-betutu.webp`,
+  ],
   logo: `${site.url}/logo/mamcheck-avatar.png`,
   description:
     "Dapur rumahan masakan Bali. Made by order: ayam betutu, sate manis ayam, sate lilit, tum ayam, soup iga, dan Kacang Bali.",
@@ -72,6 +79,11 @@ const jsonLd = {
   openingHours: site.jam,
   telephone: `+${site.whatsapp}`,
   hasMenu: `${site.url}/#menu`,
+  makesOffer: [
+    { "@type": "Offer", name: "Catering harian & kantor" },
+    { "@type": "Offer", name: "Nasi kotak" },
+    { "@type": "Offer", name: "Hajatan & acara keluarga" },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

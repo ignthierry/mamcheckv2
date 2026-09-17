@@ -2,7 +2,12 @@ import { site, waLink } from "@/lib/site";
 import { WhatsAppIcon } from "./Art";
 import { Shell } from "./Section";
 
-const fakta = ["Halal, tanpa pengawet", "Bumbu digerus hari itu", "Ambil sendiri atau kirim ±25 km"];
+const fakta = [
+  "Halal, tanpa pengawet",
+  "Bumbu digerus hari itu",
+  "Ambil sendiri atau kirim ±25 km",
+  "Terima catering, nasi kotak & hajatan",
+];
 
 const pesanAwal = (isi: string) => waLink(isi);
 
@@ -12,11 +17,15 @@ function Aksi({ terang }: { terang: boolean }) {
     <>
       <div className="mt-8 flex flex-wrap items-center gap-3">
         <a
-          href={pesanAwal(`Halo ${site.brand}, saya mau pesan masakan Bali. Boleh dibantu?`)}
+          href={pesanAwal(
+            `Halo ${site.brand}, saya mau pesan masakan Bali. Boleh dibantu?`,
+          )}
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold shadow-warm transition-colors ${
-            terang ? "bg-gold text-ink hover:bg-goldsoft" : "bg-forest text-cream hover:bg-moss"
+            terang
+              ? "bg-gold text-ink hover:bg-goldsoft"
+              : "bg-forest text-cream hover:bg-moss"
           }`}
         >
           <WhatsAppIcon className="h-5 w-5" />
@@ -42,7 +51,10 @@ function Aksi({ terang }: { terang: boolean }) {
               terang ? "text-honey/90" : "text-moss"
             }`}
           >
-            <span aria-hidden="true" className="h-1.5 w-1.5 rotate-45 bg-gold" />
+            <span
+              aria-hidden="true"
+              className="h-1.5 w-1.5 rotate-45 bg-gold"
+            />
             {f}
           </li>
         ))}
@@ -85,8 +97,8 @@ export default function Hero() {
             Masakan Bali rumahan, dimasak setelah kamu pesan.
           </h1>
           <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-honey/95 [text-shadow:0_2px_12px_rgba(7,33,26,0.8)]">
-            Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan di dapur{" "}
-            {site.city} dan dikirim hari itu juga.
+            Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan
+            di dapur {site.city} dan dikirim hari itu juga.
           </p>
           <Aksi terang />
         </Shell>
@@ -96,7 +108,10 @@ export default function Hero() {
 
   /* --- Versi cadangan: tanpa video, hero teks di atas cream --- */
   return (
-    <section id="atas" className="relative overflow-hidden border-b border-gold/20">
+    <section
+      id="atas"
+      className="relative overflow-hidden border-b border-gold/20"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_15%_0%,#f6ecd9_0%,rgba(247,240,227,0)_62%)]"
@@ -110,8 +125,8 @@ export default function Hero() {
           Masakan Bali rumahan, dimasak setelah kamu pesan.
         </h1>
         <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-moss/90">
-          Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan di dapur {site.city}{" "}
-          dan dikirim hari itu juga.
+          Ayam betutu, sate lilit, tum ayam, sampai soup iga — diolah dadakan di
+          dapur {site.city} dan dikirim hari itu juga.
         </p>
         <Aksi terang={false} />
       </Shell>

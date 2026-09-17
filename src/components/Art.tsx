@@ -26,7 +26,14 @@ function Plate({ children }: { children?: React.ReactNode }) {
   return (
     <>
       <circle cx="100" cy="104" r="86" fill={C.sand} />
-      <circle cx="100" cy="104" r="86" fill="none" stroke={C.goldsoft} strokeWidth="3" />
+      <circle
+        cx="100"
+        cy="104"
+        r="86"
+        fill="none"
+        stroke={C.goldsoft}
+        strokeWidth="3"
+      />
       <circle
         cx="100"
         cy="104"
@@ -41,7 +48,15 @@ function Plate({ children }: { children?: React.ReactNode }) {
   );
 }
 
-function Steam({ x = 100, y = 46, delay = 0 }: { x?: number; y?: number; delay?: number }) {
+function Steam({
+  x = 100,
+  y = 46,
+  delay = 0,
+}: {
+  x?: number;
+  y?: number;
+  delay?: number;
+}) {
   return (
     <g
       className="steam-puff"
@@ -68,7 +83,12 @@ export function AyamBetutu(props: ArtProps) {
         d="M34 118c22-34 74-46 120-22 12 6 14 14 4 18-40 16-104 14-124 4z"
         fill={C.leaf}
       />
-      <path d="M40 116c26-26 78-36 118-18" fill="none" stroke={C.jade} strokeWidth="2.5" />
+      <path
+        d="M40 116c26-26 78-36 118-18"
+        fill="none"
+        stroke={C.jade}
+        strokeWidth="2.5"
+      />
       <path d="M62 96c-10-16-4-30 10-36 4 14 8 24 6 36z" fill={C.moss} />
       <path d="M136 78c14-10 28-8 32 4-13 2-22 6-32 10z" fill={C.moss} />
       {/* ayam panggang */}
@@ -76,16 +96,45 @@ export function AyamBetutu(props: ArtProps) {
         d="M62 108c0-22 20-38 46-38s44 16 44 36c0 18-20 26-46 26s-44-6-44-24z"
         fill={C.goldsoft}
       />
-      <path d="M76 84c14-10 40-12 58-2" fill="none" stroke={C.gold} strokeWidth="2.5" />
-      <path d="M74 118c22 8 52 8 74-2" fill="none" stroke={C.gold} strokeWidth="2.5" />
+      <path
+        d="M76 84c14-10 40-12 58-2"
+        fill="none"
+        stroke={C.gold}
+        strokeWidth="2.5"
+      />
+      <path
+        d="M74 118c22 8 52 8 74-2"
+        fill="none"
+        stroke={C.gold}
+        strokeWidth="2.5"
+      />
       {/* paha + tulang */}
       <path d="M136 96c14-4 26 2 26 12s-12 14-22 10" fill={C.goldsoft} />
-      <circle cx="170" cy="104" r="7" fill={C.cream} stroke={C.gold} strokeWidth="2" />
-      <circle cx="184" cy="112" r="6" fill={C.cream} stroke={C.gold} strokeWidth="2" />
+      <circle
+        cx="170"
+        cy="104"
+        r="7"
+        fill={C.cream}
+        stroke={C.gold}
+        strokeWidth="2"
+      />
+      <circle
+        cx="184"
+        cy="112"
+        r="6"
+        fill={C.cream}
+        stroke={C.gold}
+        strokeWidth="2"
+      />
       {/* sambal */}
       <ellipse cx="58" cy="140" rx="22" ry="9" fill={C.sambal} />
       <ellipse cx="52" cy="138" rx="6" ry="2.6" fill="#E8694A" />
-      <path d="M148 142c8-10 20-12 26-4" fill="none" stroke={C.jade} strokeWidth="3" />
+      <path
+        d="M148 142c8-10 20-12 26-4"
+        fill="none"
+        stroke={C.jade}
+        strokeWidth="3"
+      />
     </svg>
   );
 }
@@ -100,7 +149,15 @@ export function SateManis(props: ArtProps) {
         { x: -22, y: 16 },
       ].map((o, i) => (
         <g key={i} transform={`translate(${o.x} ${o.y})`}>
-          <line x1="30" y1="152" x2="150" y2="48" stroke="#8A6A3A" strokeWidth="4" strokeLinecap="round" />
+          <line
+            x1="30"
+            y1="152"
+            x2="150"
+            y2="48"
+            stroke="#8A6A3A"
+            strokeWidth="4"
+            strokeLinecap="round"
+          />
           {[0, 1, 2, 3].map((k) => {
             const t = 44 + k * 28 + i * 2;
             const x = t;
@@ -128,9 +185,19 @@ export function SateManis(props: ArtProps) {
           })}
         </g>
       ))}
-      <path d="M46 150c30 10 74 8 100-6" fill="none" stroke={C.gold} strokeWidth="2.5" />
+      <path
+        d="M46 150c30 10 74 8 100-6"
+        fill="none"
+        stroke={C.gold}
+        strokeWidth="2.5"
+      />
       <ellipse cx="152" cy="132" rx="16" ry="7" fill={C.sambal} />
-      <path d="M38 132c8-8 18-9 24-2" fill="none" stroke={C.jade} strokeWidth="3" />
+      <path
+        d="M38 132c8-8 18-9 24-2"
+        fill="none"
+        stroke={C.jade}
+        strokeWidth="3"
+      />
     </svg>
   );
 }
@@ -148,19 +215,53 @@ export function SateLilit(props: ArtProps) {
       {baris.map((b, i) => (
         <g key={i} transform={`translate(${b.x} 0)`}>
           {/* batang serai */}
-          <rect x="34" y={b.y - 6} width="132" height="12" rx="6" fill={C.cream} stroke={C.goldsoft} strokeWidth="2" />
+          <rect
+            x="34"
+            y={b.y - 6}
+            width="132"
+            height="12"
+            rx="6"
+            fill={C.cream}
+            stroke={C.goldsoft}
+            strokeWidth="2"
+          />
           {/* ujung daun serai */}
           <path d={`M34 ${b.y}c-12-6-18-2-20 6 8 2 14 2 20-1z`} fill={C.leaf} />
-          <path d={`M34 ${b.y + 1}c-9-3-14-1-16 4`} stroke={C.jade} strokeWidth="1.6" fill="none" />
+          <path
+            d={`M34 ${b.y + 1}c-9-3-14-1-16 4`}
+            stroke={C.jade}
+            strokeWidth="1.6"
+            fill="none"
+          />
           {/* lilitan daging */}
-          <ellipse cx="104" cy={b.y} rx="44" ry="14" fill="#C98A55" stroke={C.clay} strokeWidth="2" />
+          <ellipse
+            cx="104"
+            cy={b.y}
+            rx="44"
+            ry="14"
+            fill="#C98A55"
+            stroke={C.clay}
+            strokeWidth="2"
+          />
           {[74, 90, 106, 122].map((x) => (
-            <path key={x} d={`M${x} ${b.y - 13} c -6 12 6 14 0 26`} stroke={C.clay} strokeWidth="2" fill="none" opacity="0.75" />
+            <path
+              key={x}
+              d={`M${x} ${b.y - 13} c -6 12 6 14 0 26`}
+              stroke={C.clay}
+              strokeWidth="2"
+              fill="none"
+              opacity="0.75"
+            />
           ))}
         </g>
       ))}
       <ellipse cx="152" cy="70" rx="16" ry="7" fill={C.sambal} />
-      <path d="M44 170c12-9 26-9 34 0" fill="none" stroke={C.jade} strokeWidth="3" />
+      <path
+        d="M44 170c12-9 26-9 34 0"
+        fill="none"
+        stroke={C.jade}
+        strokeWidth="3"
+      />
     </svg>
   );
 }
@@ -178,10 +279,32 @@ export function TimAyam(props: ArtProps) {
         d="M74 106c0-14 12-22 26-22s26 8 26 22c0 8-12 12-26 12s-26-4-26-12z"
         fill={C.goldsoft}
       />
-      <path d="M78 100c12-6 32-6 44 0" fill="none" stroke={C.gold} strokeWidth="2.5" />
-      <circle cx="66" cy="104" r="7" fill={C.sand} stroke={C.gold} strokeWidth="2" />
-      <path d="M136 106c8-6 16-6 22-1" fill="none" stroke={C.jade} strokeWidth="3" />
-      <path d="M92 130h18" stroke={C.jade} strokeWidth="3" strokeLinecap="round" />
+      <path
+        d="M78 100c12-6 32-6 44 0"
+        fill="none"
+        stroke={C.gold}
+        strokeWidth="2.5"
+      />
+      <circle
+        cx="66"
+        cy="104"
+        r="7"
+        fill={C.sand}
+        stroke={C.gold}
+        strokeWidth="2"
+      />
+      <path
+        d="M136 106c8-6 16-6 22-1"
+        fill="none"
+        stroke={C.jade}
+        strokeWidth="3"
+      />
+      <path
+        d="M92 130h18"
+        stroke={C.jade}
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -202,11 +325,24 @@ export function SoupIga(props: ArtProps) {
         stroke={C.gold}
         strokeWidth="2.5"
       />
-      <ellipse cx="100" cy="98" rx="11" ry="8" fill={C.cream} stroke={C.gold} strokeWidth="2" />
+      <ellipse
+        cx="100"
+        cy="98"
+        rx="11"
+        ry="8"
+        fill={C.cream}
+        stroke={C.gold}
+        strokeWidth="2"
+      />
       <circle cx="100" cy="98" r="4" fill={C.sambal} />
       <ellipse cx="66" cy="102" rx="8" ry="5" fill={C.leaf} />
       <ellipse cx="136" cy="104" rx="8" ry="5" fill={C.leaf} />
-      <path d="M84 128c10 4 22 4 32 0" stroke={C.honey} strokeWidth="3" fill="none" />
+      <path
+        d="M84 128c10 4 22 4 32 0"
+        stroke={C.honey}
+        strokeWidth="3"
+        fill="none"
+      />
     </svg>
   );
 }
@@ -216,11 +352,24 @@ export function KacangBali(props: ArtProps) {
     <svg viewBox="0 0 200 200" {...props} aria-hidden="true">
       <Plate />
       {/* kemasan kraft */}
-      <path d="M58 70h84v72a14 14 0 0 1-14 14H72a14 14 0 0 1-14-14z" fill={C.goldsoft} />
+      <path
+        d="M58 70h84v72a14 14 0 0 1-14 14H72a14 14 0 0 1-14-14z"
+        fill={C.goldsoft}
+      />
       <path d="M58 70l14-18h56l14 18z" fill={C.gold} />
-      <path d="M72 52h56" stroke={C.cream} strokeWidth="3" strokeLinecap="round" />
+      <path
+        d="M72 52h56"
+        stroke={C.cream}
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
       <rect x="72" y="88" width="56" height="34" rx="6" fill={C.cream} />
-      <path d="M80 98h40M80 108h26" stroke={C.gold} strokeWidth="3" strokeLinecap="round" />
+      <path
+        d="M80 98h40M80 108h26"
+        stroke={C.gold}
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
       {/* kacang tumpah */}
       {[
         { x: 74, y: 168, r: -14 },
@@ -230,8 +379,19 @@ export function KacangBali(props: ArtProps) {
         { x: 114, y: 162, r: -22 },
       ].map((k, i) => (
         <g key={i} transform={`translate(${k.x} ${k.y}) rotate(${k.r})`}>
-          <ellipse rx="13" ry="9" fill="#CDA468" stroke={C.clay} strokeWidth="1.8" />
-          <path d="M-6 -3c4-2 8-2 12 0M-6 3c4-2 8-2 12 0" stroke={C.clay} strokeWidth="1.4" fill="none" />
+          <ellipse
+            rx="13"
+            ry="9"
+            fill="#CDA468"
+            stroke={C.clay}
+            strokeWidth="1.8"
+          />
+          <path
+            d="M-6 -3c4-2 8-2 12 0M-6 3c4-2 8-2 12 0"
+            stroke={C.clay}
+            strokeWidth="1.4"
+            fill="none"
+          />
         </g>
       ))}
     </svg>
@@ -259,7 +419,12 @@ export function Patra(props: ArtProps) {
         stroke="currentColor"
         strokeWidth="2"
       />
-      <path d="M24 10v30M24 20c5-3 9-3 12 0M24 20c-5-3-9-3-12 0M24 30c4-2 7-2 10 1" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M24 10v30M24 20c5-3 9-3 12 0M24 20c-5-3-9-3-12 0M24 30c4-2 7-2 10 1"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
     </svg>
   );
 }
@@ -267,10 +432,25 @@ export function Patra(props: ArtProps) {
 /** Pita ornamen berulang (pengganti garis pemisah biasa). */
 export function OrnamentBand({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 240 24" className={className} preserveAspectRatio="none" aria-hidden="true">
+    <svg
+      viewBox="0 0 240 24"
+      className={className}
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
       <defs>
-        <pattern id="patra-band" width="40" height="24" patternUnits="userSpaceOnUse">
-          <path d="M20 3c6 4 9 8 9 12s-3 8-9 10c-6-2-9-6-9-10s3-8 9-12z" fill="none" stroke="currentColor" strokeWidth="1.4" />
+        <pattern
+          id="patra-band"
+          width="40"
+          height="24"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M20 3c6 4 9 8 9 12s-3 8-9 10c-6-2-9-6-9-10s3-8 9-12z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.4"
+          />
           <path d="M20 7v16" stroke="currentColor" strokeWidth="1" />
           <circle cx="20" cy="15" r="2" fill="currentColor" />
         </pattern>
@@ -283,9 +463,19 @@ export function OrnamentBand({ className = "" }: { className?: string }) {
 /** Baris segitiga tumpal — border khas kain Bali. */
 export function TumpalBorder({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 240 16" className={className} preserveAspectRatio="none" aria-hidden="true">
+    <svg
+      viewBox="0 0 240 16"
+      className={className}
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
       <defs>
-        <pattern id="tumpal" width="24" height="16" patternUnits="userSpaceOnUse">
+        <pattern
+          id="tumpal"
+          width="24"
+          height="16"
+          patternUnits="userSpaceOnUse"
+        >
           <path d="M0 16L12 0l12 16z" fill="currentColor" opacity="0.9" />
           <path d="M12 6l5 8h-10z" fill="#FCF7EC" opacity="0.55" />
         </pattern>
@@ -338,7 +528,15 @@ export function InstagramIcon(props: ArtProps) {
 
 export function ChevronIcon(props: ArtProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" {...props} aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      {...props}
+      aria-hidden="true"
+    >
       <path d="M6 9l6 6 6-6" />
     </svg>
   );

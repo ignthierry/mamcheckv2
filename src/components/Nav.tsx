@@ -4,6 +4,7 @@ import { WhatsAppIcon } from "./Art";
 
 const nav = [
   { href: "#menu", label: "Menu" },
+  { href: "#catering", label: "Catering" },
   { href: "#cara-pesan", label: "Cara pesan" },
   { href: "#pengiriman", label: "Pengiriman" },
   { href: "#tanya", label: "Tanya" },
@@ -14,7 +15,9 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
   return (
     <span className="flex items-center gap-2">
       <Image
-        src={dark ? "/logo/mamcheck-avatar.png" : "/logo/mamcheck-avatar-light.png"}
+        src={
+          dark ? "/logo/mamcheck-avatar.png" : "/logo/mamcheck-avatar-light.png"
+        }
         alt="Logo Olshop MamCheck"
         width={512}
         height={435}

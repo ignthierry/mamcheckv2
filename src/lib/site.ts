@@ -48,7 +48,8 @@ export const menu: Disain[] = [
   {
     id: "ayam-betutu",
     nama: "Ayam Betutu",
-    deskripsi: "Ayam berbumbu base genep, dikukus lalu dipanggang dalam balutan daun pisang.",
+    deskripsi:
+      "Ayam berbumbu base genep, dikukus lalu dipanggang dalam balutan daun pisang.",
     opsi: ["Original (gurih)", "Pedas khas Bali"],
     label: "Paling dicari",
     art: "betutu",
@@ -59,7 +60,8 @@ export const menu: Disain[] = [
   {
     id: "sate-manis-ayam",
     nama: "Sate Manis Ayam",
-    deskripsi: "Paha ayam dimarinasi bumbu, dipanggang arang, disajikan dengan sambal kecap & limau.",
+    deskripsi:
+      "Paha ayam dimarinasi bumbu, dipanggang arang, disajikan dengan sambal kecap & limau.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "sate",
     foto: "/menu/sate-manis-ayam.webp",
@@ -69,7 +71,8 @@ export const menu: Disain[] = [
   {
     id: "sate-lilit",
     nama: "Sate Lilit",
-    deskripsi: "Daging bumbu kelapa dililitkan pada batang serai, dibakar sampai wangi.",
+    deskripsi:
+      "Daging bumbu kelapa dililitkan pada batang serai, dibakar sampai wangi.",
     opsi: ["10 tusuk", "20 tusuk"],
     art: "lilit",
     foto: "/menu/sate-lilit.webp",
@@ -79,7 +82,8 @@ export const menu: Disain[] = [
   {
     id: "tim-ayam",
     nama: "Tum Ayam",
-    deskripsi: "Ayam cincang berbumbu rempah, santan, dan telur, dibungkus daun pisang lalu dikukus.",
+    deskripsi:
+      "Ayam cincang berbumbu rempah, santan, dan telur, dibungkus daun pisang lalu dikukus.",
     opsi: ["Paha bawah", "Dada"],
     label: "Ringan & hangat",
     art: "tim",
@@ -90,18 +94,45 @@ export const menu: Disain[] = [
   {
     id: "soup-iga",
     nama: "Soup Iga",
-    deskripsi: "Iga sapi direbus lambat berjam-jam sampai daging lepas dari tulang.",
+    deskripsi:
+      "Iga sapi direbus lambat berjam-jam sampai daging lepas dari tulang.",
     opsi: ["Porsi reguler", "Porsi jumbo"],
     art: "soup",
+    foto: "/menu/soup-iga.webp",
+    fotoAlt:
+      "Soup iga sapi MamCheck — kuah kaldu bening dengan iga empuk, tomat, daun bawang, dan bawang goreng, disajikan dengan sambal dan jeruk nipis",
   },
   {
     id: "kacang-bali",
     nama: "Kacang Bali",
-    deskripsi: "Kacang tanah sangrai bumbu Bali: gurih, pedas, sedikit manis. Tahan lama.",
+    deskripsi:
+      "Kacang tanah sangrai bumbu Bali: gurih, pedas, sedikit manis. Tahan lama.",
     opsi: ["200 gram", "500 gram", "1 kg"],
     label: "Bisa kirim luar kota",
     hargaViaAdmin: true,
     art: "kacang",
+  },
+];
+
+/** pesanan porsi besar: catering, nasi kotak, hajatan */
+export const layanan = [
+  {
+    judul: "Catering harian & kantor",
+    isi: "Menu Bali diporsi per tray atau per orang untuk makan siang tim, arisan, dan rapat. Mulai 10 porsi, konfirmasi H-1.",
+    cta: "Halo MamCheck, mau tanya catering untuk … porsi, tanggal …",
+    label: "Mulai 10 porsi",
+  },
+  {
+    judul: "Nasi kotak",
+    isi: "Nasi kotak siap antar untuk rapat, syukuran, atau dibagikan ke warga. Pilih lauk: betutu, sate, tum ayam, atau soup iga.",
+    cta: "Halo MamCheck, mau pesan nasi kotak … kotak untuk tanggal …",
+    label: "Bisa pilih lauk",
+  },
+  {
+    judul: "Hajatan & acara keluarga",
+    isi: "Pesanan porsi besar untuk pernikahan, selamatan, dan hajatan. Dapur masak setelah pesanan masuk, jadwal dibahas dengan admin.",
+    cta: "Halo MamCheck, ada hajatan tanggal …, mau tanya menu dan estimasi biaya.",
+    label: "Diskusi jadwal",
   },
 ];
 
@@ -159,6 +190,14 @@ export const faq: { q: string; a: string }[] = [
   {
     q: "Ayam Betutu ada level pedasnya?",
     a: "Ada dua: Original yang gurih dan Pedas khas Bali. Sebutkan saat chat.",
+  },
+  {
+    q: "Bisa pesan untuk hajatan atau nasi kotak?",
+    a: "Bisa. Sebutkan tanggal, jumlah porsi/kotak, dan lokasi. Untuk porsi besar konfirmasi minimal H-1, dan untuk hajatan sebaiknya lebih awal supaya jadwal dapur bisa disiapkan.",
+  },
+  {
+    q: "Ada minimal order untuk catering?",
+    a: "Catering dan nasi kotak mulai 10 porsi. Jumlah lebih besar bisa dibahas menunya dengan admin, termasuk pilihan lauk dan waktu pengiriman.",
   },
   {
     q: "Bagaimana pembayarannya?",

@@ -12,7 +12,8 @@ export default function Footer() {
           <div>
             <Logo tone="light" />
             <p className="mt-4 max-w-xs text-[0.88rem] leading-relaxed text-honey/80">
-              Dapur rumahan masakan Bali. Semua menu dibuat setelah pesanan masuk.
+              Dapur rumahan masakan Bali. Semua menu dibuat setelah pesanan
+              masuk.
             </p>
             <div className="mt-5 flex gap-2.5">
               <a

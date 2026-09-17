@@ -8,7 +8,9 @@ export default function RevealTrigger() {
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));
     if (!nodes.length) return;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       nodes.forEach((n) => n.classList.add("is-in"));
       return;

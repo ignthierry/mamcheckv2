@@ -45,8 +45,12 @@ export default function MenuBoard() {
                   ) : null}
                 </div>
 
-                <h3 className="mt-4 font-display text-[1.25rem] leading-snug text-forest">{m.nama}</h3>
-                <p className="mt-1.5 text-[0.88rem] leading-relaxed text-moss/85">{m.deskripsi}</p>
+                <h3 className="mt-4 font-display text-[1.25rem] leading-snug text-forest">
+                  {m.nama}
+                </h3>
+                <p className="mt-1.5 text-[0.88rem] leading-relaxed text-moss/85">
+                  {m.deskripsi}
+                </p>
 
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {m.opsi.map((o) => (
